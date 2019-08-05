@@ -131,8 +131,8 @@ width: 100%;
 height: 100%;
 }
 #tech-content{
-    padding:10%;
-    padding-top: 0
+    padding:10% 10%;
+    padding-top: 20px;
 }
 .testimonial{
     border:2px black solid;
