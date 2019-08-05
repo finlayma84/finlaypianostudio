@@ -1,0 +1,164 @@
+html{
+    background: #F9F9F9
+}
+
+body{
+    background: #F9F9F9;
+    height: 100vh;
+}
+@media (max-width:767px){
+    #schedule-button{
+        align-self: center;
+      
+    }
+
+}
+
+
+#banner-image{
+    border: black 5px solid;
+    padding: 0
+}
+.banner-container{
+ display: flex;
+
+}
+.banner{
+    margin-top: 70px;
+    width: 100%;
+    height:  150px;
+}
+#banner-headline{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    z-index: 1;
+    font-family: monospace;
+    font-weight: 100;
+    background-color:#20769A;
+    color: white;
+    padding: 10px;
+}
+
+.image a{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 40%;
+    margin:0 auto;
+    border: 1px white solid !important;
+    width: 60%;
+    height: 20%;
+    left: 20%;
+    background-color: rgba(0, 0, 0, 0.4) !important; 
+
+
+}
+.image a:hover{
+    background-color: rgba(0,0,0,0.6)  !important;
+    color: white;
+}
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo{
+    width: 100%;
+    min-width: 200px;
+    max-width: 300px;
+    margin-right: 50px;
+}
+
+
+
+
+#schedule-button{
+    margin: 10px;
+    width: 150px;
+    border: 2px black solid;
+}
+#index-container{
+    margin-top:30px;
+}
+#yourDiv{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.p-heading{
+    color:#20769A !important;
+    font-weight:100 !important;
+}
+
+#schedule-button:hover{
+    box-sizing: border-box;
+    background: rgba(0 ,0,0, 0.2) !important;
+    color: black!important;
+    border: 2px black solid !important;
+}
+.footer{
+    position: relative;
+    bottom: 0;
+}
+.main-content{
+    min-height: 80vh;
+    padding: 0 10%;
+
+}
+body > div.main-content > div > h2{
+    margin-bottom: 50px !important;
+}
+.video-container {
+    border: 2px lightgray solid;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+#tech-content{
+    padding:60px
+}
+.testimonial{
+    border:2px black solid;
+    height: 300px;
+    display: flex;
+      align-items: center;
+   padding: 10px;
+
+}
+#contact-image{
+    height: 600px;
+    width: 500px;
+    border: 2px black solid !important;
+}
+.navbar-container{
+    padding: 0 10%
+}
+hr{
+    border-color:#20769A;
+}
+
+.description-height{
+    height: 150px;
+}
+.extra-height{
+    height: 100px;
+}
+.image-height{
+    height: 250px !important;
+}
