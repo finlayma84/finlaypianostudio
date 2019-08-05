@@ -32,6 +32,6 @@ app.use("/", indexRoutes);
 //   console.log('ERROR:', err.message)
 // });
 
-app.listen(8000,()=>{
+app.listen(process.env.PORT || 8000,()=>{
     console.log("My name is Frasier Crane, and I am listening!")
 })
