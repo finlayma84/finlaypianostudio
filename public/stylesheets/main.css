@@ -180,3 +180,6 @@ hr{
     font-size: 1.5rem;
     color: black;
 }
+#banner-image > img{
+    width: 100%;
+}
