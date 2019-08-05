@@ -23,14 +23,15 @@ app.use(flash())
 
 app.use("/", indexRoutes);
 
-// mongoose.connect('mongodb://localhost:27017/finlaypianostudio', {
-//   useNewUrlParser: true,
-//   useCreateIndex: true
-// }).then(() => {
-//   console.log('Connected to DB');
-// }).catch(err => {
-//   console.log('ERROR:', err.message)
-// });
+mongoose.connect('mongodb+srv://finlayma84:Gefilte123@cluster0-mjrwq.mongodb.net/test?retryWrites=true&w=majority', {
+  useNewUrlParser: true,
+  useCreateIndex: true
+}).then(() => {
+  console.log('Connected to DB');
+}).catch(err => {
+  console.log('ERROR:', err.message)
+});
+
 
 app.listen(process.env.PORT || 8000,()=>{
     console.log("My name is Frasier Crane, and I am listening!")
