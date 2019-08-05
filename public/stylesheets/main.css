@@ -12,8 +12,18 @@ body{
       
     }
 
-}
+ 
+ }  
 
+ body > div.ui.vertical.footer.top.attached.segment.center.aligned{
+     margin-top: 50px;
+ }
+#footer-menu a{
+    color: black;
+}
+#footer-menu{
+    margin-top: 15px;
+}
 #contact-content{
     padding-top: 25px;
 }
@@ -164,4 +174,9 @@ hr{
 }
 .image-height{
     height: 250px !important;
+}
+
+#social a{
+    font-size: 1.5rem;
+    color: black;
 }
