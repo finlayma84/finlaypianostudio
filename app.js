@@ -23,14 +23,14 @@ app.use(flash())
 
 app.use("/", indexRoutes);
 
-mongoose.connect('mongodb://localhost:27017/finlaypianostudio', {
-  useNewUrlParser: true,
-  useCreateIndex: true
-}).then(() => {
-  console.log('Connected to DB');
-}).catch(err => {
-  console.log('ERROR:', err.message)
-});
+// mongoose.connect('mongodb://localhost:27017/finlaypianostudio', {
+//   useNewUrlParser: true,
+//   useCreateIndex: true
+// }).then(() => {
+//   console.log('Connected to DB');
+// }).catch(err => {
+//   console.log('ERROR:', err.message)
+// });
 
 app.listen(8000,()=>{
     console.log("My name is Frasier Crane, and I am listening!")
