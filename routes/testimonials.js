@@ -44,7 +44,7 @@ var testimonials =[
         image: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
         text: "Reading over Dr. Finlay's comments, I was very impressed with his listening. He tempers his comments, but still gets across important points in a very direct, simple and honest way. I think it shows great sensitivity to the students but also gives them things to think about.",
         user: "Douglass Guiles",
-        relationship: "Piano Parent"
+        relationship: "Colleague"
 
     }
 
