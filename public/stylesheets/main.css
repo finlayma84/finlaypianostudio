@@ -184,11 +184,9 @@ hr{
 #social a i{
 
     font-size: 2rem;
-    color: black;
-    margin-top: 20px;
-    margin-right: 30px;
-
+    margin: 15px;
 }
+
 #social a:hover{
     text-shadow: rgba(10, 10, 10, 0.4) 2px 2px 4px;
 }
