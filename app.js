@@ -6,10 +6,12 @@ const express = require("express"),
     passport = require('passport'),
     semantic = require('semantic')
     LocalStrategy = require('passport-local'),
-    methodOverride = require("method-override");
+    methodOverride = require("method-override"),
+    ejsLint= require("ejs-lint");
 
 //require routes
 indexRoutes = require("./routes/index")
+testimonialRoutes = require("./routes/testimonials")
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
@@ -22,6 +24,8 @@ app.use(methodOverride("_method"))
 app.use(flash())
 
 app.use("/", indexRoutes);
+app.use("/testimonials", testimonialRoutes)
+console.log(process.env.DATABASEURL)
 mongoose.connect(process.env.DATABASEURL, {
   useNewUrlParser: true,
   useCreateIndex: true

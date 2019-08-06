@@ -7,4 +7,4 @@ var testimonialSchema = new mongoose.Schema({
     relationship: String
 })
 
-module.exports = mongoose.model("Testimonials")
+module.exports = mongoose.model("Testimonials", testimonialSchema)
