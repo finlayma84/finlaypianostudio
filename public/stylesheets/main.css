@@ -180,9 +180,13 @@ hr{
     height: 250px !important;
 }
 
-#social a{
-    font-size: 1.5rem;
+#social a i{
+
+    font-size: 2rem;
     color: black;
+    margin-top: 20px;
+    margin-right: 30px;
+
 }
 #social a:hover{
     text-shadow: rgba(10, 10, 10, 0.4) 2px 2px 4px;
