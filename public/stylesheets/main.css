@@ -186,6 +186,9 @@ hr{
     font-size: 1.5rem;
     color: black;
 }
+#social a:hover{
+    text-shadow: rgba(10, 10, 10, 0.4) 2px 2px 4px;
+}
 #banner-image > img{
     width: 100%;
 }
