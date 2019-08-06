@@ -20,6 +20,12 @@ body{
  }
 #footer-menu a{
     color: black;
+    padding: 5px;
+
+}
+#footer-menu a:hover{
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.05) ;
 }
 #footer-menu{
     margin-top: 15px;
