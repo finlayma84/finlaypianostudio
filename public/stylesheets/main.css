@@ -11,7 +11,9 @@ body{
         align-self: center;
       
     }
-
+    body > div.container > div > div > a:nth-child(1){
+        width: 80%;
+    }
  
  }  
 
