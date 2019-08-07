@@ -4,7 +4,6 @@ const express = require("express"),
     mongoose = require('mongoose'),
     flash = require("connect-flash"),
     passport = require('passport'),
-    semantic = require('semantic')
     LocalStrategy = require('passport-local'),
     methodOverride = require("method-override"),
     ejsLint= require("ejs-lint");
@@ -25,7 +24,6 @@ app.use(flash())
 
 app.use("/", indexRoutes);
 app.use("/testimonials", testimonialRoutes)
-console.log(process.env.DATABASEURL)
 mongoose.connect(process.env.DATABASEURL, {
   useNewUrlParser: true,
   useCreateIndex: true

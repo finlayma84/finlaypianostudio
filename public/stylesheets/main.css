@@ -16,7 +16,28 @@ body{
     }
  
  }  
-
+ #relationship{
+     color: red;
+ }
+  select{
+      height: 3rem !important;
+  }
+*:focus{
+    outline: none!important;
+}
+ textarea{
+     resize: none !important;
+ }
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+#delete{
+    display: inline;
+}
+#show-card{
+    width: 500px;
+}
  body > div.ui.vertical.footer.top.attached.segment.center.aligned{
      margin-top: 50px;
  }

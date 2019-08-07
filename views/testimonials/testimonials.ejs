@@ -1,18 +1,23 @@
-<% include ./partials/header.ejs %>
+<% include ../partials/header.ejs %>
 
 <br>
 <h1 class="ui huge center aligned header"><i class="comments outline icon"></i>
 Testimonials</h1>
+
+<h1 class="ui huge center aligned header"><a class="ui large black basic  button" href="/testimonials/new">Add new testimonial</a></h1>
+<Br>
 <hr>
 <br>
 <div>
+<h2 class="ui large center aligned header">Click to view, edit, or delete testimonial</h2>
 <div class="ui three column stackable grid">
-      <%testimonials.forEach((testimonial)=>{%>
+      <%testimonials.forEach((testimonial, index)=>{%>
                 <div class="column">
+                  <a href="/testimonials/<%=testimonial._id%>">
                         <div class="ui  cards">
                                 <div class="card card-height">
                                   <div class="image">
-                                    <img class="image-height" src="<%=testimonial.image%>">
+                                    <img class="image-height" src="<%=images[index%8]%>">
                                   </div>
                                   <div class="content">
                                     <div class="description  description-height">
@@ -27,13 +32,16 @@ Testimonials</h1>
                                     </span>
                                     <span>
                                       <i class="user icon"></i>
-                                      <%=testimonial.user%>
+                                      <%=testimonial.name%>
 
                                         </span>
                                   </div>
                                 </div>
                         </div>
+                        </a>
+                      </form>
                   </div>
+              
                   <%})%>
                 </div>
 
@@ -58,4 +66,4 @@ Testimonials</h1>
 
 
 
-<% include ./partials/footer.ejs %>
+<% include ../partials/footer.ejs %>

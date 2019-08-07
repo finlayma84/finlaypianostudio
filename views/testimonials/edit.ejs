@@ -1,0 +1,32 @@
+<% include ../partials/header.ejs %>
+
+<h1 class="ui huge center aligned header"><i class="comments outline icon"></i>Edit testimonial by <%=testimonial.name%></h1>
+<hr>
+<form class="ui form" action="/testimonials/<%=testimonial._id%>?_method=PUT" method="POST">
+        <div class="field">
+          <label>Name</label>
+          <input type="text" name="testimonial[name]" value="<%=testimonial.name%>">
+        </div>
+        <div class="field">
+          <label>Relationship: Currently set to <span id="relationship"><%=testimonial.relationship.toUpperCase()%></span> </label>
+          
+          <select name="testimonial[relationship]"  value="<%=testimonial.relationship%>"> required>
+              <option disabled selected value> -- select an option -- </option>
+              <option value="Student">Student</option>
+              <option value="Student Parent">Student Parent</option>
+              <option value="Colleague">Colleague</option>
+              <option value="Friend">Friend</option>
+              </select>
+        </div>
+        <div class="field">
+          <label>Name</label>
+          <textarea type="text" name="testimonial[text]" placeholder="Write your testimonial here!"><%=testimonial.text%></textarea>
+     </div>
+    
+            
+              
+
+        <button class="ui button" type="submit">Submit</button>
+      </form>
+
+      <% include ../partials/footer.ejs %>
