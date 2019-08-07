@@ -196,4 +196,7 @@ hr{
 #vcita{
     height: 700px;
 }
+#contact-content > div:nth-child(2) > h4{
+    margin-top: 2.4em;
+}
  
