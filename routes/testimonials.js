@@ -106,8 +106,8 @@ router.put("/:id",middleware.checkTestimonialOwnership, (req,res)=>{
             }
             res.redirect("/testimonials/"+ req.params.id); 
         }
-    })
-})
+    )
+
 
 
 //destroy remove testimonial
@@ -122,7 +122,7 @@ router.delete("/:id", middleware.isLoggedIn, (req,res)=>{
             return res.redirect("back");
         }
         res.redirect("/testimonials/")
-    }
-})
+    })
+});
 });
 module.exports = router
