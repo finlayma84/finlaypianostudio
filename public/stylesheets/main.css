@@ -7,9 +7,8 @@ body{
     height: 100vh;
 }
 @media (max-width:767px){
-    #login{
-        margin: 0 auto;
-    }
+
+
 
     body > div.container > div > div > a:nth-child(1){
         width: 80%;
@@ -30,7 +29,7 @@ body{
  }
 .buttons{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 #authcontainer{
     padding-left: 25%;

@@ -76,26 +76,32 @@
                     </a>
                          <% if (!currentUser){%> 
                 <div class="ui secondary menu right">
-                        <a class="item" href="/login">
-                            <button id="login" class="ui button">Login</button> 
-                         </a>
-                          <a class="item" href="/register"><button id="register" class="ui button">Register</button>
-                         </a>
-                </div>
+                        <a class="item mobile hidden" href="/login">
+                            <button id="login" class="ui button mobile hidden">Login</button> 
+                        </a>
+                            <a href="/login" class="item mobile only">Login</a> 
+                         
+                        <a class="item mobile hidden" href="/register">
+                            <button id="register" class="ui button mobile hidden">register</button> 
+                        </a>
+                            <a href="/register" class="item mobile only">Register</a> 
+                       
 
+                </div>
                     <%}else{%>
                     <a class="right item" href="">
                         <%if(currentUser.firstname){%>
                             Welcome, <%=currentUser.firstname%>! </a>
                             <%}else{%>
                             Welcome, <%=currentUser.username%>! </a>
+                            <a href="/logout"><button class="ui red button">Logout</button> </a>
 
                             <%}%>
-                    <a class= "right item" href="/logout"> <button class="ui button red">Logout</button> </a>
 
                     <%}%> 
 
-            
+
+
                     <div class="hamburger">
                             <span class="hamburger-bun"></span>
                             <span class="hamburger-patty"></span>
@@ -107,7 +113,7 @@
     </div>
   
 <div class="main-content">
-    <div id="schedule-div">
+    <div class="mobile hidden" id="schedule-div">
         <a href="https://live.vcita.com/site/en27y7hjp0zhboyr/online-scheduling?staff=ngxwhe1u43agj3x8" target="blank" class="ui large black button livesite-schedule" id="schedule-button" data-staff="ngxwhe1u43agj3x8">
             Request Free Lesson
 </a>
@@ -119,4 +125,3 @@
         <% if(success&& success.length > 0){%>
     <div class="ui positive message" id="success"><%= success %></div>
     <%}%>
-
