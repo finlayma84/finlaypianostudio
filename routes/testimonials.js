@@ -99,12 +99,13 @@ router.get("/:id/edit", middleware.checkTestimonialOwnership, (req,res)=>{
 router.put("/:id",middleware.checkTestimonialOwnership, (req,res)=>{
     Testimonial.findByIdAndUpdate(req.params.id, req.body.testimonial, (err,updatedTestimonial)=>{
         if(err){
-            console.log(err)
-            res.redirect("/testimonials")
+            req.flash("error", err)
+            return res.redirect("/testimonials")
         }else{
 
             }
-            res.redirect("/testimonials/"+ req.params.id); 
+            req.flash("success", "Successfully added testimonial!")
+            return res.redirect("/testimonials/"+ req.params.id); 
         })
     });
 

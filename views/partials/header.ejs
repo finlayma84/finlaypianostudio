@@ -58,43 +58,43 @@
                         <img id="logo" src="/images/logo.png" alt="couldn't find image">
             
                     </a>
+
                     <a class="item" href="/">
                         Home
                     </a>
-                    <a class="item" href="/approach">
+                    <a class="item mobile tablet hidden" href="/approach">
                         Approach
                     </a>
-                    <a class="item" href="/technology">
+                    <a class="item  mobile tablet hidden" href="/technology">
                         Technology
                     </a>
-                    <a class="item" href="/testimonials">
+                    <a class="item mobile tablet " href="/testimonials">
                         Testimonials
                     </a>
                     <a class="item" href="/contact">
                         Contact
                     </a>
                          <% if (!currentUser){%> 
-    
-                     <a class="item" href="/login">
-                       Login/Sign Up
-                    </a>
+                <div class="ui secondary menu right">
+                        <a class="item" href="/login">
+                            <button id="login" class="ui button">Login</button> 
+                         </a>
+                          <a class="item" href="/register"><button id="register" class="ui button">Register</button>
+                         </a>
+                </div>
+
                     <%}else{%>
-                    <a class="item" href="">
+                    <a class="right item" href="">
                         <%if(currentUser.firstname){%>
                             Welcome, <%=currentUser.firstname%>! </a>
                             <%}else{%>
                             Welcome, <%=currentUser.username%>! </a>
 
                             <%}%>
-                
-                    <a class= "item" href="/logout"> Logout</a>
+                    <a id="login" class= "right item" href="/logout"> Logout</a>
 
                     <%}%> 
-                    <div class="ui secondary menu right">
-                        <a href="https://live.vcita.com/site/en27y7hjp0zhboyr/online-scheduling?staff=ngxwhe1u43agj3x8" target="blank" class="ui large black button livesite-schedule" id="schedule-button" data-staff="ngxwhe1u43agj3x8">
-                                Request Free Lesson
-                    </a>
-                </div>
+
             
                     <div class="hamburger">
                             <span class="hamburger-bun"></span>
@@ -107,6 +107,11 @@
     </div>
   
 <div class="main-content">
+    <div id="schedule-div">
+        <a href="https://live.vcita.com/site/en27y7hjp0zhboyr/online-scheduling?staff=ngxwhe1u43agj3x8" target="blank" class="ui large black button livesite-schedule" id="schedule-button" data-staff="ngxwhe1u43agj3x8">
+            Request Free Lesson
+</a>
+</div>
          <% if(error&& error.length > 0){%>
     <div class="ui negative message" id="error"><%= error %></div>
     <%}%>

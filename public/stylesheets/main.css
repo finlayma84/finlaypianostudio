@@ -7,10 +7,10 @@ body{
     height: 100vh;
 }
 @media (max-width:767px){
-    #schedule-button{
-        align-self: center;
-      
+    #login{
+        margin: 0 auto;
     }
+
     body > div.container > div > div > a:nth-child(1){
         width: 80%;
     }
@@ -99,6 +99,17 @@ body{
 
 
 }
+.right a {
+justify-self: flex-end !important
+}
+#register{
+    background: #20769A !important;
+    color: white;
+}
+#login{
+    background: #5e5e6f;
+    color: white;
+}
 .image a:hover{
     background-color: rgba(0,0,0,0.6)  !important;
     color: white;
@@ -119,9 +130,12 @@ body{
 
 
 #schedule-button{
-    margin: 10px;
-    width: 150px;
     border: 2px black solid;
+    display: flex;
+    margin: 0 50px;
+}
+#schedule-div{
+    display: flex;
 }
 #index-container{
     margin-top:30px;
