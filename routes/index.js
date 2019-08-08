@@ -36,14 +36,14 @@ router.post("/register", (req, res) => {
     });
 
     User.register(newUser, req.body.password, (err, user) => {
-        if (err) {
+        if(err){
             req.flash("error", err.message)
             return res.render("register");
-
-        }
+            }
         passport.authenticate("local")(req, res, () => {
-            res.redirect("/")
             req.flash("success", "Welcome to the Finlay Piano Studio, "+ user.username + "!")
+            res.redirect("/")
+
         });
     });
 });
