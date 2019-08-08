@@ -36,12 +36,15 @@ router.post("/register", (req, res) => {
     });
 
     User.register(newUser, req.body.password, (err, user) => {
-        if(err){
+        if (err) {
             req.flash("error", err.message)
             return res.render("register");
-            }
+
+        }
+
+
         passport.authenticate("local")(req, res, () => {
-            req.flash("success", "Welcome to the Finlay Piano Studio, "+ user.username + "!")
+            req.flash("success", "Welcome to the Finlay Piano Studio, "+ req.body.username + "!")
             res.redirect("/")
 
         });
@@ -61,8 +64,12 @@ router.post("/login", passport.authenticate("local", {
     }), (req, res) => {
     if (req.body.referer && (req.body.referer !== undefined && req.body.referer.slice(-6) !== "/login")) {
         res.redirect(req.body.referer);
+        req.flash("Welcome back, "+ req.body.username + "!")
+
     } else {
         res.redirect("/");
+        req.flash("Welcome back, "+ req.body.username + "!")
+
     }
 });
 

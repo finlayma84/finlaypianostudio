@@ -102,9 +102,7 @@ router.put("/:id",middleware.checkTestimonialOwnership, (req,res)=>{
             console.log(err)
             res.redirect("/testimonials")
         }else{
-            if (!foundTestimonial) {
-                req.flash("error", "Item not found.");
-                return res.redirect("back");
+
             }
             res.redirect("/testimonials/"+ req.params.id); 
         }
@@ -120,8 +118,7 @@ router.delete("/:id", middleware.isLoggedIn, (req,res)=>{
         res.redirect("/testimonials")
         console.log(err);
     }else{
-        if (!foundTestimonial) {
-            req.flash("error", "Item not found.");
+
             return res.redirect("back");
         }
         res.redirect("/testimonials/")
