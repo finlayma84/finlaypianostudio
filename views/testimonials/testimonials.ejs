@@ -2,9 +2,13 @@
 <br>
 <h1 class="ui huge center aligned header"><i class="comments outline icon"></i>
   Testimonials</h1>
+  <% if (currentUser){%>
 
 <h1 class="ui huge center aligned header"><a class="ui large black basic  button" href="/testimonials/new">Add new
     testimonial</a></h1>
+    <%}else{%>
+<a href="/login"><h4 class="ui medium center aligned header">Log in or Sign up to add a testimonial!</h4></a> 
+      <%}%>
 <Br>
 <hr>
 <br>
@@ -13,7 +17,9 @@
   <div class="ui three column stackable grid">
     <%testimonials.forEach((testimonial, index)=>{%>
     <div class="column">
+    <% if (currentUser){%>
       <a href="/testimonials/<%=testimonial._id%>">
+    <%}%>
         <div class="ui  cards">
           <div class="card card-height">
             <div class="image">
@@ -35,7 +41,10 @@
             </div>
           </div>
         </div>
+        <% if (currentUser){%>
+
       </a>
+      <%}%>
       </form>
     </div>
     <%})%>

@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var Testimonial = require("../models/testimonials");
+var middleware = require("../middleware");
 
 var images = [
 
@@ -32,19 +33,24 @@ router.get("/", (req, res) => {
 })
 
 //new pop-up form to create new testimonial
-router.get("/new", (req, res) => {
+router.get("/new", middleware.isLoggedIn, (req, res) => {
     res.render("testimonials/new");
 })
 
 //create-post route to push testimonial to database
-router.post("/", (req, res) => {
+router.post("/", middleware.isLoggedIn, (req, res) => {
     var name = req.body.name
     var relationship = req.body.relationship
     var text = req.body.text
+    var author = {
+        id: req.user._id,
+        username: req.user.username
+      }
     var newTestimonial = {
         name: name,
         relationship: relationship,
         text: text,
+        author: author
         
 
     };
@@ -65,16 +71,24 @@ router.get("/:id", (req, res)=>{
         if(err){
             console.log(err)
         }else{
+            if (!foundTestimonial) {
+                req.flash("error", "Item not found.");
+                return res.redirect("back");
+            }
             res.render("testimonials/show", {testimonial: foundTestimonial, images: images})
         }
     })
 })
 //edit pop-form to edit testimonial
-router.get("/:id/edit", (req,res)=>{
+router.get("/:id/edit", middleware.checkTestimonialOwnership, (req,res)=>{
     Testimonial.findById((req.params.id), (err, foundTestimonial)=>{
         if(err){
             console.log(err)
         }else{
+            if (!foundTestimonial) {
+                req.flash("error", "Item not found.");
+                return res.redirect("back");
+            }
             res.render("testimonials/edit",{testimonial: foundTestimonial})
 
         }
@@ -82,12 +96,16 @@ router.get("/:id/edit", (req,res)=>{
 })
 
 //update put route to update testimonial in db
-router.put("/:id", (req,res)=>{
+router.put("/:id",middleware.checkTestimonialOwnership, (req,res)=>{
     Testimonial.findByIdAndUpdate(req.params.id, req.body.testimonial, (err,updatedTestimonial)=>{
         if(err){
             console.log(err)
             res.redirect("/testimonials")
         }else{
+            if (!foundTestimonial) {
+                req.flash("error", "Item not found.");
+                return res.redirect("back");
+            }
             res.redirect("/testimonials/"+ req.params.id); 
         }
     })
@@ -95,13 +113,17 @@ router.put("/:id", (req,res)=>{
 
 
 //destroy remove testimonial
-router.delete("/:id", (req,res)=>{
+router.delete("/:id", middleware.isLoggedIn, (req,res)=>{
 
     Testimonial.findByIdAndRemove(req.params.id, (err)=>{
     if(err){
         res.redirect("/testimonials")
         console.log(err);
     }else{
+        if (!foundTestimonial) {
+            req.flash("error", "Item not found.");
+            return res.redirect("back");
+        }
         res.redirect("/testimonials/")
     }
 })

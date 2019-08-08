@@ -36,12 +36,16 @@
 
                         <span class="buttons">
                             <a href="/testimonials" class="ui small blue button">Back</a>
-                            <!-- <a href="/testimonials/<%=testimonial._id%>/edit" class="ui small teal button">Edit</a>
+                             <% if(currentUser && testimonial.author.id.equals(currentUser._id)){ %> 
+
+                            <a href="/testimonials/<%=testimonial._id%>/edit" class="ui small teal button">Edit</a>
 
                             <form id="delete" action="/testimonials/<%= testimonial._id %>?_method=DELETE"
                                 method="post">
                                 <button class="ui small orange button">Delete</button>
-                            </form> -->
+                            </form>
+                             <%}%> 
+
                         </span>
                 </div>
 

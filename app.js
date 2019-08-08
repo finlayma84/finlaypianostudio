@@ -22,6 +22,11 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"))
 app.use(flash())
+app.use(require("express-session")({
+  secret: "Moopy",
+  resave: false,
+  saveUninitialized: false
+}));
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -32,8 +37,8 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use(function(req, res, next){
   res.locals.currentUser = req.user;
-  
-
+  res.locals.error = req.flash("error")
+  res.locals.success=req.flash("success")
   next();
 });
 

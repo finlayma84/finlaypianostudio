@@ -37,36 +37,39 @@ router.post("/register", (req, res) => {
 
     User.register(newUser, req.body.password, (err, user) => {
         if (err) {
-            console.log(err);
+            req.flash("error", err.message)
             return res.render("register");
 
         }
         passport.authenticate("local")(req, res, () => {
             res.redirect("/")
+            req.flash("success", "Welcome to the Finlay Piano Studio, "+ user.username + "!")
         });
     });
 });
 
 //LOGIN ROUTES
 
-router.get("/login", (req, res) => {
-    res.render("login")
-})
+router.get("/login", (req, res)=> {
+    res.render("login", {referer:req.headers.referer});
+});
 
 router.post("/login", passport.authenticate("local", {
-
-    successRedirect: "/",
     failureRedirect: "/login",
+    failureFlash: true,
+    successFlash: true
+    }), (req, res) => {
+    if (req.body.referer && (req.body.referer !== undefined && req.body.referer.slice(-6) !== "/login")) {
+        res.redirect(req.body.referer);
+    } else {
+        res.redirect("/");
+    }
+});
 
-}),
-
-    (req, res) => {
-        if (err) {
-        }
-    })
 router.get("/logout", (req, res) => {
     req.logout();
-    res.redirect("index")
+    req.flash("success", "Successfully logged you out!")
+    res.redirect("back")
 })
 
 module.exports = router
