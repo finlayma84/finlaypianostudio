@@ -17,7 +17,7 @@ var images = [
 
     "https://images.unsplash.com/photo-1539789760335-0391b207a0fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
 
-    "https://images.unsplash.com/photo-1511375763896-4e8e2ffbaf35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+    "../images/pianostairs.jpeg"
 
 ]
 
