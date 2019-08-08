@@ -1,0 +1,33 @@
+<% include ./partials/header %>
+
+<h1 class="ui huge header center aligned">sign up</h1>
+<div id="authcontainer" class="container">
+   
+    <form action="/register" method="post" class="ui form">
+        <div class="field ten wide" >
+            <label for="username">username: </label>
+            <input type="text" name="username" placeholder="username" required>
+        </div>
+        <div class="field ten wide">
+            <label for="passwordpassword">password</label>
+            <input type="password" name="password" placeholder="password" required>
+        </div>
+        <div class="field ten wide ">
+            <label for="firstname">firstname</label>
+            <input type="text" name="firstname" placeholder="First Name" required>
+        </div>
+        <div class="field ten wide "><label for="lastname">lastname</label>
+            <input type="text" name="lastname" placeholder="Last Name" required>
+        </div>
+        <div class="field ten wide"><label for="email">email</label>
+            <input type="email" name="email" placeholder="Email address" required>
+        </div>
+        <button class="ui large blue button "type="submit">Sign Up</button>
+    </form>
+    <p>Already registered? <a href="/login">Log in</a> </p>
+
+</div> 
+
+
+
+<% include ./partials/footer %>

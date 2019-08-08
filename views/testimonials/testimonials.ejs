@@ -1,57 +1,49 @@
 <% include ../partials/header.ejs %>
-
 <br>
 <h1 class="ui huge center aligned header"><i class="comments outline icon"></i>
-Testimonials</h1>
+  Testimonials</h1>
 
-<h1 class="ui huge center aligned header"><a class="ui large black basic  button" href="/testimonials/new">Add new testimonial</a></h1>
+<h1 class="ui huge center aligned header"><a class="ui large black basic  button" href="/testimonials/new">Add new
+    testimonial</a></h1>
 <Br>
 <hr>
 <br>
 <div>
-<h2 class="ui large center aligned header">Click to view, edit, or delete testimonial</h2>
-<div class="ui three column stackable grid">
-      <%testimonials.forEach((testimonial, index)=>{%>
-                <div class="column">
-                  <a href="/testimonials/<%=testimonial._id%>">
-                        <div class="ui  cards">
-                                <div class="card card-height">
-                                  <div class="image">
-                                    <img class="image-height" src="<%=images[index%8]%>">
-                                  </div>
-                                  <div class="content">
-                                    <div class="description  description-height">
-                                        <%=testimonial.text%>
+  <h2 class="ui large center aligned header">Click to view, edit, or delete testimonial</h2>
+  <div class="ui three column stackable grid">
+    <%testimonials.forEach((testimonial, index)=>{%>
+    <div class="column">
+      <a href="/testimonials/<%=testimonial._id%>">
+        <div class="ui  cards">
+          <div class="card card-height">
+            <div class="image">
+              <img class="image-height" src="<%=images[index%images.length]%>">
+            </div>
+            <div class="content">
+              <div class="description  description-height">
+                <%=testimonial.text%>
+              </div>
+            </div>
+            <div class="extra extra-height content">
+              <span class="right floated">
+                <%=testimonial.relationship%>
+              </span>
+              <span>
+                <i class="user icon"></i>
+                <%=testimonial.name%>
+              </span>
+            </div>
+          </div>
+        </div>
+      </a>
+      </form>
+    </div>
+    <%})%>
+  </div>
+</div>
 
-                                  </div>
-                                  </div>
-                                  <div class="extra extra-height content">
-                                    <span class="right floated">
-                                        <%=testimonial.relationship%>
 
-                                    </span>
-                                    <span>
-                                      <i class="user icon"></i>
-                                      <%=testimonial.name%>
 
-                                        </span>
-                                  </div>
-                                </div>
-                        </div>
-                        </a>
-                      </form>
-                  </div>
-              
-                  <%})%>
-                </div>
-
-           
-
-          
-                </div>
-          
-          
-           
 
 
 

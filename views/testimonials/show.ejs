@@ -1,6 +1,7 @@
 <% include ../partials/header.ejs %>
 
 <br>
+
 <h1 class="ui huge center aligned header"><i class="comments outline icon"></i>Testimonial by <%=testimonial.name%>
 </h1>
 
@@ -10,17 +11,17 @@
 
     <div class="ui one column centered stackable grid">
 
-                <div id="show-card"class="ui card card-height">
+                <div id="show-card"class="ui card">
                     <div class="image">
                         
-                        <img class="image-height" src="<%=images[Math.floor(Math.random() * (7 - 0 + 1) + 0)];%>">
+                        <img  src="<%=images[Math.floor(Math.random() * ((images.length-1) - 0 + 1) + 0)];%>">
                     </div>
                     <div class="content">
-                        <div class="description left aligned description-height">
+                        <div class="description left aligned">
                             <%=testimonial.text%>
                         </div>
                     </div>
-                    <div class="extra left aligned extra-height content">
+                    <div class="extra left aligned content">
                         <span class="right floated">
                             <%=testimonial.relationship%>
 
@@ -31,15 +32,15 @@
 
                         </span>
                     </div>
-                    <div class="extra extra-height content">
+                    <div class="extra content">
 
                         <span class="buttons">
                             <a href="/testimonials" class="ui small blue button">Back</a>
-                            <a href="/testimonials/<%=testimonial._id%>/edit" class="ui small yellow button">Edit</a>
+                            <a href="/testimonials/<%=testimonial._id%>/edit" class="ui small teal button">Edit</a>
 
                             <form id="delete" action="/testimonials/<%= testimonial._id %>?_method=DELETE"
                                 method="post">
-                                <button class="ui small red button">Delete</button>
+                                <button class="ui small orange button">Delete</button>
                             </form>
                         </span>
                 </div>

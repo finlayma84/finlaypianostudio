@@ -73,6 +73,15 @@
                     <a class="item" href="/contact">
                         Contact
                     </a>
+                    <ul class="nav navbar-nav navbar-right">
+                        <% if (!currentUser){%> 
+    
+                    <a class="item" href="/register">
+                       Login/Sign Up
+                    </a>
+                    <%}else{%>
+                    Welcome, <%=currentUser.firstname %>!
+                    <%}%>
                     <div class="ui secondary menu right">
                         <a href="https://live.vcita.com/site/en27y7hjp0zhboyr/online-scheduling?staff=ngxwhe1u43agj3x8" target="blank" class="ui large black button livesite-schedule" id="schedule-button" data-staff="ngxwhe1u43agj3x8">
                                 Request Free Lesson

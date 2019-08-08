@@ -32,6 +32,9 @@ body{
     display: flex;
     justify-content: space-around;
 }
+#authcontainer{
+    padding-left: 20%;
+}
 #delete{
     display: inline;
 }
