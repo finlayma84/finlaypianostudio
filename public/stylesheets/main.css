@@ -16,6 +16,9 @@ body{
     body > div.container > div > div > a:nth-child(1){
         width: 80%;
     }
+    #profileActivity{
+        padding-top: 20px;
+    }
     #schedule-button{
         border: 2px black solid;
         display: flex;

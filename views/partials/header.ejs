@@ -29,6 +29,7 @@
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'livesite-jssdk'));
     </script>
+
 </head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,12 +87,12 @@
                 </div>
                 <%}else{%>
                 <%if(currentUser.firstname){%>
-                <a class="right item" href="">
+                <a class="right item" href="/profile">
                     Welcome, <%=currentUser.firstname%>!<%if (currentUser.isAdmin){%> (admin)<%}%> 
                 </a>
                 <a class="right item" href="/logout"><button class="ui small red button"><i class="sign out alternate icon"></i>Logout</button> </a>
                 <%}else{%>
-                <a class="right item" href="">
+                <a class="right item" href="/profile">
                     Welcome, <%=currentUser.username%><%if (currentUser.isAdmin){%>(admin)<%}%>!
                     <a href="/logout"><button class="ui small red button"><i class="sign out alternate icon"></i>Logout</button> </a>
                 </a>
@@ -122,11 +123,16 @@
         </div>
         <%}%>
         <% if(error&& error.length > 0){%>
-        <div class="ui negative message" id="error"><%= error %></div>
+        <div class="ui negative message" id="error">
+                <i class="close icon"></i>
+            <%= error %></div>   
+               
         <%}%>
 
         <% if(success&& success.length > 0){%>
-        <div class="ui positive message" id="success"><%= success %></div>
+        <div class="ui positive message" id="success">
+                <i class="close icon"></i>
+                <%= success %></div>
         <%}%>
         <% if (currentUser && currentUser.isAdmin){%>
 

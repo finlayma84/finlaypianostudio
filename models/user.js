@@ -7,7 +7,9 @@ var UserScehma = new mongoose.Schema({
     firstname: String,
     lastname: String,
     email: String,
-    isAdmin:{type:Boolean, default: false}
+    isAdmin:{type:Boolean, default: false},
+    avatar: {type: String, default: "../images/default-user-icon-14.jpg"
+},
 });
 
 UserScehma.plugin(passportLocalMongoose);

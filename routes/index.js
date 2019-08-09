@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 var passport = require("passport")
 var User = require("../models/user")
+var middleware = require("../middleware");
 
 
 
@@ -29,10 +30,11 @@ router.get("/register", (req, res) => {
 
 router.post("/register", (req, res) => {
     var newUser = new User({
-        username: req.body.username,
-        email: req.body.email,
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
+            username: req.body.username,
+            email: req.body.email,
+            firstname: req.body.firstname,
+            lastname: req.body.lastname,
+            avatar: req.body.avatar
     });
 
     if (req.body.username === "finlayma84"){
@@ -82,6 +84,11 @@ router.get("/logout", (req, res) => {
 
      res.redirect("/")
  });
+
+ router.get("/profile", middleware.isLoggedIn, (req, res)=>{
+     res.render("users/profile")
+
+ })
 
 module.exports = router
 

@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+<div class="ui top attached segment">
+        <h1><%=currentUser.firstname%> <%=currentUser.lastname%>'s Profile</h1>
+<hr>
+    <div class="ui stackable two column  grid">
+        <div class="column">
+            <div class="ui divided items">
+
+                <div class="item">
+                <div class="ui image">
+                    <img src="<%= currentUser.avatar%>" alt="">
+                </div>
+                </div>
+                <div class="item">
+                    <a href="" class="ui small basic button">Change Avatar</a>
+                </div>
+                <div class="item">
+                   <strong> Username: <%=currentUser.username%></strong>
+                </div>
+                <div class="item">Email: <%=currentUser.email %>
+                </div>
+                <a href="" class="ui small basic button">Update Email Address</a>
+                </a>
+               <P>Member since: <%=currentUser._id.getTimestamp().toString().substring(0,15)%></P>
+         
+
+        </div>
+    </div>
+        <div class="column">  
+            <div id="profileActivity"class="ui divided items">
+              <h1>Activity Feed</h1>
+              Coming Soon!  Here you will be able to track your practice, update your profile, and much more!
+            
+        </div>
+</div>
+</div>
+
+<% include ../partials/footer %>
+
+

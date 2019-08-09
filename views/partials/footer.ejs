@@ -16,6 +16,16 @@
 
 
         <div class="ui container" id="yourDiv">
+                <script>
+                        $('.message .close')
+                        .on('click', function() {
+                            $(this)
+                            .closest('.message')
+                            .transition('fade')
+                            ;
+                        })
+                ;
+                    </script>
 
            <small>&copy; 2019 Pianokeys Web Development</small> 
         </div>
