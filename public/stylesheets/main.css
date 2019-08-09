@@ -11,12 +11,14 @@ body{
     body > div.container > div > div > a.right.item{
         justify-content: center;
         align-items: center;
+
     }
 
-
     body > div.container > div > div > a:nth-child(8) > button{
+        margin-bottom: 30px;
         margin-left: 30%;
         width: 40%
+
     }
     
     body > div.container > div > div > a:nth-child(1){
