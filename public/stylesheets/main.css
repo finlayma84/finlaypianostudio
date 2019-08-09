@@ -9,7 +9,10 @@ body{
 @media (max-width:767px){
 
 
-
+    body > div.container > div > div > a:nth-child(8) > button{
+        justify-content: center;
+    }
+    
     body > div.container > div > div > a:nth-child(1){
         width: 80%;
     }
