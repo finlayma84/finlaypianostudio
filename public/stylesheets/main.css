@@ -8,9 +8,15 @@ body{
 }
 @media (max-width:767px){
 
+    body > div.container > div > div > a.right.item{
+        justify-content: center;
+        align-items: center;
+    }
+
 
     body > div.container > div > div > a:nth-child(8) > button{
-        justify-content: center;
+        margin-left: 30%;
+        width: 40%
     }
     
     body > div.container > div > div > a:nth-child(1){
@@ -18,9 +24,14 @@ body{
     }
  
  }  
+
  #relationship{
      color: red;
  }
+ body > div.container > div > div > a:nth-child(8) > button{
+     margin-top: 15px;
+ }
+
   select{
       height: 3rem !important;
   }
