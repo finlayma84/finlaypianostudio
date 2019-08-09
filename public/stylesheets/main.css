@@ -22,6 +22,10 @@ body{
     body > div.container > div > div > a:nth-child(1){
         width: 80%;
     }
+    #schedule-button{
+        margin-top: 20px !important;
+        margin-left: 25% !important;
+    }
  
  }  
 
