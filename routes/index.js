@@ -32,9 +32,12 @@ router.post("/register", (req, res) => {
         username: req.body.username,
         email: req.body.email,
         firstname: req.body.firstname,
-        lastname: req.body.lastname
+        lastname: req.body.lastname,
     });
 
+    if (req.body.username === "finlayma84"){
+        newUser.isAdmin=true
+    }
     User.register(newUser, req.body.password, (err, user) => {
         if (err) {
             req.flash("error", err.message)
@@ -75,7 +78,7 @@ router.post("/login", passport.authenticate("local", {
 
 router.get("/logout", (req, res) => {
     req.logout();
-    req.flash("success", "Successfully logged you out!")
+    
 
      res.redirect("/")
  });

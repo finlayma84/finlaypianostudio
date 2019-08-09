@@ -119,7 +119,7 @@ router.delete("/:id", middleware.isLoggedIn, (req,res)=>{
         res.redirect("/testimonials")
         console.log(err);
     }else{
-
+            req.flash("error", "Testimonial deleted" )
             return res.redirect("/testimonials");
         }
         res.redirect("/testimonials")

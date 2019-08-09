@@ -25,7 +25,7 @@ middlewareObj.checkTestimonialOwnership = function(req, res, next) {
                     return res.redirect("back");
                 }
                   // does user own the Testimonial?
-               if(foundTestimonial.author.id.equals(req.user._id)) {
+               if(foundTestimonial.author.id.equals(req.user._id) || req.user.isAdmin) {
                    next();
                } else {
                    req.flash("error", "You don't have permission to do that.")

@@ -42,10 +42,22 @@
                 <%=testimonial.name%>
               </span>
             </div>
+            <%if (currentUser && currentUser.isAdmin){ %>
+            
+            <div class="extra extra-height content buttons">
+                <!-- <a href="/testimonials/<%=testimonial._id%>/edit" class="ui small basic teal button"><i class="pencil alternate icon"></i>Edit</a> -->
+                <form id="delete" action="/testimonials/<%=testimonial._id%>/edit" method="get">
+                <button class="ui small basic teal button"><i class="pencil icon"></i>Edit</button>
+              </form> 
+                <form id="delete" action="/testimonials/<%= testimonial._id %>?_method=DELETE"
+                    method="post">
+                  <button class="ui small basic orange button"><i class="trash icon"></i>Delete</button>
+                </form> 
+            </div>
+                <%}%>       
           </div>
         </div>
       </a>
-      </form>
     </div>
     <%})%>
   </div>

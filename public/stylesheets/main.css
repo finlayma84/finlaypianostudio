@@ -8,36 +8,28 @@ body{
 }
 @media (max-width:767px){
 
-    body > div.container > div > div > a.right.item{
-        justify-content: center;
-        align-items: center;
-
-    }
 
     body > div.container > div > div > a:nth-child(8) > button{
-        margin-bottom: 30px;
-        margin-left: 30%;
-        width: 40%
-
+        justify-content: center;
     }
     
     body > div.container > div > div > a:nth-child(1){
         width: 80%;
     }
     #schedule-button{
-        margin-top: 20px !important;
-        margin-left: 25% !important;
+        border: 2px black solid;
+        display: flex;
+        margin: 0 20%;
+        width:100%;
+        justify-content: center;
+        max-width: 250px;;
+
     }
  
  }  
-
  #relationship{
      color: red;
  }
- body > div.container > div > div > a:nth-child(8) > button{
-     margin-top: 15px;
- }
-
   select{
       height: 3rem !important;
   }
@@ -148,11 +140,7 @@ justify-self: flex-end !important
 
 
 
-#schedule-button{
-    border: 2px black solid;
-    display: flex;
-    margin: 0 50px;
-}
+
 #schedule-div{
     display: flex;
 }
@@ -258,4 +246,3 @@ hr{
 #contact-content > div:nth-child(2) > h4{
     margin-top: 2.4em;
 }
- 

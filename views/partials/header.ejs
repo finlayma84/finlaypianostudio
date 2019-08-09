@@ -76,35 +76,26 @@
                 <% if (!currentUser){%>
                 <div class="ui secondary menu right">
                     <a class="item mobile hidden" href="/login">
-                        <button id="login" class="ui button mobile hidden">Login</button>
+                        <button id="login" class="ui button mobile hidden"><i class="sign-in icon"></i>Login</button>
                     </a>
-                    <a href="/login" class="item mobile only">Login</a>
-
+                    <a href="/login" class="item mobile only"><i class="sign-in icon"></i>Login</a>
                     <a class="item mobile hidden" href="/register">
-                        <button id="register" class="ui button mobile hidden">Sign Up</button>
+                        <button id="register" class="ui button mobile hidden"><i class="user plus icon"></i>Sign Up</button>
                     </a>
-                    <a href="/register" class="item mobile only">Sign Up</a>
-
-
+                    <a href="/register" class="item mobile only"><i class="user plus icon"></i>Sign Up</a>
                 </div>
                 <%}else{%>
                 <%if(currentUser.firstname){%>
-
                 <a class="right item" href="">
-                    Welcome, <%=currentUser.firstname%>! 
+                    Welcome, <%=currentUser.firstname%>!<%if (currentUser.isAdmin){%> (admin)<%}%> 
                 </a>
-                <a href="/logout"><button class="ui red button">Logout</button> </a>
-
+                <a class="right item" href="/logout"><button class="ui small red button"><i class="sign out alternate icon"></i>Logout</button> </a>
                 <%}else{%>
                 <a class="right item" href="">
-                    Welcome, <%=currentUser.username%>
-                    <a href="/logout"><button class="ui red button">Logout</button> </a>
-
+                    Welcome, <%=currentUser.username%><%if (currentUser.isAdmin){%>(admin)<%}%>!
+                    <a href="/logout"><button class="ui small red button"><i class="sign out alternate icon"></i>Logout</button> </a>
                 </a>
-
-
                 <%}%>
-
                     <%}%>
 
 
@@ -121,11 +112,11 @@
 
     <div class="main-content">
             <% if (!currentUser){%>
-
         <div  id="schedule-div">
             <a href="https://live.vcita.com/site/en27y7hjp0zhboyr/online-scheduling?staff=ngxwhe1u43agj3x8"
                 target="blank" class="ui large black button livesite-schedule" id="schedule-button"
                 data-staff="ngxwhe1u43agj3x8">
+                <i class="clock outline icon"></i>
                 Request Free Lesson
             </a>
         </div>
@@ -137,3 +128,7 @@
         <% if(success&& success.length > 0){%>
         <div class="ui positive message" id="success"><%= success %></div>
         <%}%>
+        <% if (currentUser && currentUser.isAdmin){%>
+
+       <% } %>
+
