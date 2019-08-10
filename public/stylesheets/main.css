@@ -22,8 +22,8 @@ body{
     #schedule-button{
         border: 2px black solid;        
         width:100%;
-        margin: 20px;
-        max-width: 450px;
+        margin: 20px 0;
+        max-width: 490px;
         font-size: 1rem;
 
     }

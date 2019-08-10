@@ -110,29 +110,33 @@
     </div>
 
     <div class="main-content">
-        <div  id="schedule-div">
-            <a href="https://live.vcita.com/site/en27y7hjp0zhboyr/online-scheduling?staff=ngxwhe1u43agj3x8"
-                target="blank" class="ui large black button livesite-schedule" id="schedule-button"
-                data-staff="ngxwhe1u43agj3x8">
-                <i class="clock outline icon"></i>
-                Request Free Lesson
-            </a>
-            <% if (!currentUser){%>
-
-            <a href="/login"
-                 class="ui large button register mobile only" id="schedule-button">
-                <i class="sign-in icon"></i>
-                Sign in
-            </a>
+        <div class="ui one column grid">
+                <div class="column">
+                        <a href="https://live.vcita.com/site/en27y7hjp0zhboyr/online-scheduling?staff=ngxwhe1u43agj3x8"
+                            target="blank" class="ui large black button livesite-schedule" id="schedule-button"
+                            data-staff="ngxwhe1u43agj3x8">
+                            <i class="clock outline icon"></i>
+                            Request Free Lesson
+                        </a>
+                        <% if (!currentUser){%>
+            
+                        <a href="/login"
+                             class="ui large button register mobile only" id="schedule-button">
+                            <i class="sign-in icon"></i>
+                            Sign in
+                        </a>
+            
+                    <%} else {%>
+                        <a href="/logout"
+                             class="ui large red button mobile only" id="schedule-button">
+                            <i class="sign-out icon"></i>
+                            Logout
+                        </a>
+                        <%}%>
+                </div>
 
         </div>
-        <%} else {%>
-            <a href="/logout"
-                 class="ui large red button mobile only" id="schedule-button">
-                <i class="sign-out icon"></i>
-                Logout
-            </a>
-            <%}%>
+
 
         <% if(error&& error.length > 0){%>
         <div class="ui negative message" id="error">
