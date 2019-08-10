@@ -88,7 +88,9 @@
                 <%}else{%>
                 <%if(currentUser.firstname){%>
                 <a class="right item" href="/profile">
-                    Welcome, <%=currentUser.firstname%>!<%if (currentUser.isAdmin){%> (admin)<%}%> 
+                    Welcome, <%=currentUser.firstname%>!<%if (currentUser.isAdmin){%> (admin)
+                        <a href="/users" class="item">Users</a>
+                        <%}%> 
                 </a>
                 <a class="right item" href="/logout"><button class="ui small red button"><i class="sign out alternate icon"></i>Logout</button> </a>
                 <%}else{%>
@@ -134,7 +136,4 @@
                 <i class="close icon"></i>
                 <%= success %></div>
         <%}%>
-        <% if (currentUser && currentUser.isAdmin){%>
-
-       <% } %>
-
+   

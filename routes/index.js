@@ -86,9 +86,23 @@ router.get("/logout", (req, res) => {
  });
 
  router.get("/profile", middleware.isLoggedIn, (req, res)=>{
-     res.render("users/profile")
 
- })
+            res.render("users/profile")
+
+         })
+   
+
+
+ router.get("/users",  middleware.isLoggedIn, middleware.isAdmin,  (req,res)=>{
+    User.find({}, (err, allUsers)=>{
+        if(err){
+            req.flash(err)
+        }else{
+        res.render("admin/users", {users: allUsers})
+ }
+})
+
+})
 
 module.exports = router
 

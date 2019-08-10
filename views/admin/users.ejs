@@ -1,0 +1,15 @@
+<% include ../partials/header %>
+<div class="container">
+<h1 class="ui huge center aligned header">Roster</h1>
+<hr>
+<% users.forEach((user)=> {%>
+    <div class="ui attached segment">
+   <strong><h2><%=user.firstname%> <%=user.lastname%></h2></strong> 
+    <p><%=user.email%></p>
+    <div class="ui small image">   
+         <img src="<%=user.avatar%>" alt="">
+    </div>
+</div>
+    <%})%>
+</div>
+<% include ../partials/footer %>
