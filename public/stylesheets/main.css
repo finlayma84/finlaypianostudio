@@ -34,6 +34,9 @@ body{
 
  
  }  
+ #forgot{
+     display: inline;
+ }
  #relationship{
      color: red;
  }

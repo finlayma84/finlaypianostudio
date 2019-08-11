@@ -1,0 +1,25 @@
+<% include ./partials/header %>
+
+<h1 class="ui huge header center aligned">Reset password</h1>
+<div id="authcontainer" class="container">
+   <p> <strong>Use the form below to reset your password:</strong>  </p>
+    <form id="forgot" action="/reset/<%= token %>" method="post" class="ui form">
+
+        <div class="field ten wide"><label for="password">New Password: </label>
+            <input type="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="field ten wide"><label for="confirm">Confirm New Password: </label>
+            <input type="password" name="confirm" placeholder="Confirm Password" required>
+        </div>
+        <button class="ui large button register"type="submit">Reset Password</button>    
+
+    </form>
+    <br>
+    <br>
+
+
+</div> 
+
+
+
+<% include ./partials/footer %>

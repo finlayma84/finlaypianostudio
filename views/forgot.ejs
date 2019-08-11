@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+
+<h1 class="ui huge header center aligned">Forgot your password?</h1>
+<div id="authcontainer" class="container">
+   <p> <strong>Just enter your email below and we'll send you an email with further instructions:</strong>  </p>
+    <form id="forgot" action="/forgot" method="post" class="ui form">
+
+        <div class="field ten wide"><label for="email">Email Address: </label>
+            <input type="email" name="email" placeholder="Email address" required>
+        </div>
+        <button class="ui large button register"type="submit">Send Email</button>    
+
+    </form>
+    <br>
+    <br>
+    <a href="/login">Back to Login form  </a> 
+
+
+</div> 
+
+
+
+<% include ./partials/footer %>

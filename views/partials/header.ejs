@@ -87,7 +87,7 @@
                 </div>
                 <%}else{%>
                 <%if(currentUser.firstname){%>
-                <a class="right item" href="/profile">
+                <a class="right item" href="/profile/<%=currentUser.id%>">
                     Welcome, <%=currentUser.firstname%>!<%if (currentUser.isAdmin){%> (admin)
                         <a href="/users" class="item">Users</a>
                         <%}%> 
