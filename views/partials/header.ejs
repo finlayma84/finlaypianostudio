@@ -77,13 +77,13 @@
                 <% if (!currentUser){%>
                 <div class="ui secondary menu right">
                     <a class="item mobile hidden" href="/login">
-                        <button class="login ui button mobile hidden"><i class="sign-in icon"></i>Login</button>
+                        <button class="login ui button mobile hidden"><i class="sign-in icon"></i>Sign in</button>
                     </a>
-                    <a href="/login" class="item mobile only"><i class="sign-in icon"></i>Login</a>
+                    <a href="/login" class="item mobile only"><i class="sign-in icon"></i>Sign in</a>
                     <a class="item mobile hidden" href="/register">
-                        <button class="ui button mobile hidden register"><i class="user plus icon"></i>Sign Up</button>
+                        <button class="ui button mobile hidden register"><i class="user plus icon"></i>Register</button>
                     </a>
-                    <a href="/register" class="item mobile only"><i class="user plus icon"></i>Sign Up</a>
+                    <a href="/register" class="item mobile only"><i class="user plus icon"></i>Register</a>
                 </div>
                 <%}else{%>
                 <%if(currentUser.firstname){%>
@@ -92,7 +92,7 @@
                         <a href="/users" class="item">Users</a>
                         <%}%> 
                 </a>
-                <a class="right item mobile hidden" href="/logout"><button class="ui small red button"><i class="sign out alternate icon"></i>Logout</button> </a>
+                <a class="right item mobile hidden" href="/logout"><button class="ui small red button"><i class="sign out alternate icon"></i>Sign Out</button> </a>
 
                     <%}
             }%>

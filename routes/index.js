@@ -2,9 +2,7 @@ var express = require("express");
 var router = express.Router();
 var passport = require("passport")
 var User = require("../models/user")
-var Testimonial= require ("../models/testimonials")
 var middleware = require("../middleware");
-var nodemailer = require("nodemailer");
 var async = require("async");
 var crypto= require("crypto");
 var middleware = require("../middleware");
@@ -53,6 +51,7 @@ router.post("/register", (req, res) => {
         newUser.isAdmin=true
     }
     User.register(newUser, req.body.password, (err, user) => {
+     
         if (err) {
             req.flash("error", err.message)
             return res.render("register");
@@ -61,7 +60,7 @@ router.post("/register", (req, res) => {
 
 
         passport.authenticate("local")(req, res, () => {
-            req.flash("success", "Welcome to the Finlay Piano Studio, "+ req.body.username + "!")
+            req.flash("success", "Welcome to the Finlay Piano Studio, "+ req.body.firstname + " " + req.body.lastname + "!")
             res.redirect("/")
 
         });

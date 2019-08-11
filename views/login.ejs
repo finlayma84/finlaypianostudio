@@ -1,8 +1,10 @@
 <% include ./partials/header %>
 <h1 class="ui huge header center aligned">Login</h1>
+<h4 class="ui header center aligned">  Not yet signed up? &nbsp; &nbsp;<a  class="ui register button" href="/register"><i class="user plus icon"></i>Register</a></h4></strong> 
+
 <div id="authcontainer" class="container">
 
-<form action="/login" method="post" class="ui form">
+<form action="/register" method="post" class="ui form">
     <input type="hidden" name="referer" value= <%= referer %> >
 
     <div class="field ten wide" >
@@ -14,10 +16,8 @@
         <label for="password">password</label>
         <input type="password" name="password" placeholder="password" required>
     </div>
-    <button type="submit"class="ui login large button">Log In</button>
-    Not registered?  <a href="/register">Sign Up</a>
+    <button type="submit"class="ui login large button"><i class="sign in icon"> </i>Sign in</button><br> <br>
 </form>
-<br>
-<a href="/forgot">Forgot your password?</a>
+<h3><a href="/forgot">Forgot your password?</a></h3>
 </div>
 <% include ./partials/footer %>

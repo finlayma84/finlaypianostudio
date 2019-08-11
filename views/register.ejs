@@ -1,6 +1,9 @@
 <% include ./partials/header %>
 
-<h1 class="ui huge header center aligned">sign up</h1>
+<h1 class="ui huge header center aligned">Register</h1>
+<h4 class="ui small header center aligned">Already registered? &nbsp;&nbsp;<a class="ui login button"href="/login"><i class="sign in icon"></i>Sign in</a>   </h4>     
+
+
 <div id="authcontainer" class="container">
    
     <form action="/register" method="post" class="ui form">
@@ -23,8 +26,7 @@
         <div class="field ten wide"><label for="email">email</label>
             <input type="email" name="email" placeholder="Email address" required>
         </div>
-        <button class="ui large blue button "type="submit">Sign Up</button>    
-        Already registered? <a href="/login">Log in</a> 
+        <button class="ui large register button "type="submit"><i class="user plus icon"></i>Register</button>    
 
     </form>
 
