@@ -13,6 +13,6 @@ router.get("/", middleware.isLoggedIn, (req, res)=>{
  router.get("/:id/edit", middleware.isLoggedIn, (req,res)=>{
      res.render("users/edit")
  })
-router.put("/:id")
+
 
 module.exports = router

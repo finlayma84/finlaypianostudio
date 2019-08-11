@@ -6,27 +6,32 @@
 
 <div id="authcontainer" class="container">
    
-    <form action="/register" method="post" class="ui form">
+    <form action="/register" method="post" class="ui form" enctype="multipart/form-data">
         <div class="field ten wide" >
             <label for="username">username: </label>
             <input type="text" name="username" placeholder="username" required>
         </div>
-        <div class="field ten wide">
-            
-            <label for="password">password</label>
-            <input type="password" name="password" placeholder="password" required>
-        </div>
         <div class="field ten wide ">
-            <label for="firstname">firstname</label>
-            <input type="text" name="firstname" placeholder="First Name" required>
-        </div>
-        <div class="field ten wide "><label for="lastname">lastname</label>
-            <input type="text" name="lastname" placeholder="Last Name" required>
-        </div>
+                <label for="firstname">firstname</label>
+                <input type="text" name="firstname" placeholder="First Name" required>
+            </div>
+            <div class="field ten wide "><label for="lastname">lastname</label>
+                <input type="text" name="lastname" placeholder="Last Name" required>
+            </div>
+
+
         <div class="field ten wide"><label for="email">email</label>
             <input type="email" name="email" placeholder="Email address" required>
         </div>
-        <button class="ui large register button "type="submit"><i class="user plus icon"></i>Register</button>    
+        <div class="field ten wide"><label for="avatar">Upload image</label>
+            <input type="file" id="avatar" accept="image/*" name="avatar">
+        </div>
+        <div class="field ten wide">
+                       
+                <label for="password">password</label>
+                <input type="password" name="password" placeholder="password" required>
+            </div>
+            <button class="ui large register button "type="submit"><i class="user plus icon"></i>Register</button>    
 
     </form>
 

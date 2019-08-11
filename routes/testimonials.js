@@ -103,7 +103,8 @@ router.put("/:id",middleware.checkTestimonialOwnership, (req,res)=>{
             return res.redirect("/testimonials")
         }else{
 
-            }            req.flash("success", "Your testimonial has been edited")
+            }            
+            req.flash("success", "Your testimonial has been edited")
 
             return res.redirect("/testimonials/"+ req.params.id); 
         })

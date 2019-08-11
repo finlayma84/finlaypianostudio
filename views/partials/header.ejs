@@ -86,9 +86,9 @@
                     <a href="/register" class="item mobile only"><i class="user plus icon"></i>Register</a>
                 </div>
                 <%}else{%>
-                <%if(currentUser.firstname){%>
+                <%if(currentUser){%>
                 <a class="right item" href="/profile/">
-                    Welcome, <%=currentUser.firstname%>!<%if (currentUser.isAdmin){%> (admin)
+                    <img src="<%=currentUser.avatar%>" alt="" class="ui avatar image"><%=currentUser.firstname%>!<%if (currentUser.isAdmin){%> (admin)
                         <a href="/users" class="item">Users</a>
                         <%}%> 
                 </a>
