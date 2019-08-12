@@ -51,6 +51,23 @@ body{
  #relationship{
      color: red;
  }
+ #mobile-menu{
+    overflow-y: scroll;
+    height: 50vh;
+    background-color: rgba(40,40,40, 0.95)
+ }
+ #mobile-menu > .item {
+     border-bottom: 1px #CCCCCC solid;
+ }
+ #mobile-menu > .item:last-child {
+    border-bottom: none;
+ }
+ #mobile-menu > .item > a:hover {
+    background-color: #404040
+ }
+ #mobile-menu > .item:hover {
+    background-color: #404040
+ }
   select{
       height: 3rem !important;
   }
