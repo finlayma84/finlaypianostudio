@@ -6,10 +6,16 @@
     <div class="ui attached segment">
    <strong><h2><%=user.firstname%> <%=user.lastname%></h2></strong> 
     <p><%=user.email%></p>
+    <p>Joined: <%=user._id.getTimestamp().toString().substring(0,15)%></p>
     <div class="ui small image">   
          <img src="<%=user.avatar%>" alt="">
     </div>
+    <form action="/users/<%=user._id%>?_method=DELETE" method="POST" >
+        <button  class="ui red button">Delete User</button>
+
+    </form>
 </div>
+
     <%})%>
 </div>
 <% include ../partials/footer %>

@@ -13,6 +13,8 @@ const express = require("express"),
 indexRoutes = require("./routes/index")
 testimonialRoutes = require("./routes/testimonials")
 userRoutes = require("./routes/users")
+authRoutes = require("./routes/auth")
+adminRoutes = require("./routes/admin")
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useFindAndModify', false);
@@ -47,6 +49,8 @@ app.use(function(req, res, next){
 app.use("/", indexRoutes);
 app.use("/testimonials", testimonialRoutes)
 app.use("/profile", userRoutes)
+app.use("/", authRoutes)
+app.use("/", adminRoutes)
 
 mongoose.connect(process.env.DATABASEURL, {
   useNewUrlParser: true,
