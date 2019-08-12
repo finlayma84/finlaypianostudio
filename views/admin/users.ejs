@@ -10,10 +10,9 @@
     <div class="ui small image">   
          <img src="<%=user.avatar%>" alt="">
     </div>
-    <form action="/users/<%=user._id%>?_method=DELETE" method="POST" >
-        <button  class="ui red button">Delete User</button>
-
-    </form>
+    <div class="content">
+       &nbsp;&nbsp;&nbsp;&nbsp;      <a href="/users/<%=user._id%>" class="ui button basic blue">view profile</a>
+    </div>
 </div>
 
     <%})%>

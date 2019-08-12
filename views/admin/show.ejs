@@ -1,0 +1,50 @@
+<% include ../partials/header %> 
+
+<br>
+
+<h1 class="ui medium center aligned header"><i class=" user outline icon"></i><%= user.username %>'s Profile</h1>
+<h1 class="ui huge center aligned header"><%=user.firstname%>  <%=user.lastname%></h1>
+
+
+<br>
+<div>
+
+    <div class="ui one column centered stackable grid">
+
+                <div id="show-card"class="ui card">
+                    <div class="image">
+                        
+                        <img  src="<%=user.avatar%>">
+                    </div>
+                    <div class="content">
+                        Member since <%=user._id.getTimestamp().toString().substring(0,11)%>
+
+
+                    </div>
+                    <div class="extra content">
+
+                        <span class="buttons">
+                            <a href="/users" class="ui small blue button"><i class="arrow alternate circle left outline icon"></i>Back</a>
+
+                            <% if (!user.isAdmin) { %>
+                                <form id="delete" action="/users/<%= user._id %>?_method=DELETE"
+                                    method="post">
+                                    <button class="ui small orange button"><i class="trash icon"></i>
+                                        Delete</button>
+                                </form>
+                           <% } %>
+
+
+                        </span>
+                </div>
+
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+<% include ../partials/footer %>

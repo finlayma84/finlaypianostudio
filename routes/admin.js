@@ -16,6 +16,19 @@ router.get("/users", middleware.isLoggedIn, middleware.isAdmin, (req, res) => {
     })
   
   })
+
+  router.get("/users/:id", middleware.isLoggedIn, middleware.isAdmin, (req, res)=>{
+
+    User.findById(req.params.id,(err, foundUser) =>{
+      if(err){
+        req.flash("error", err)
+      }else{
+        res.render("admin/show", {user: foundUser})
+      }
+    })
+  })
+
+
   router.delete("/users/:id", middleware.isAdmin, middleware.isLoggedIn, (req,res) =>{
     User.findByIdAndRemove(req.params.id ,(err)=>{
        if(err){
@@ -26,7 +39,7 @@ router.get("/users", middleware.isLoggedIn, middleware.isAdmin, (req, res) => {
          req.flash("error", "User removed from database.")
          return res.redirect("/users")
        }
-       res.redirect("/user")
+       res.redirect("/users")
      });
     
   });
