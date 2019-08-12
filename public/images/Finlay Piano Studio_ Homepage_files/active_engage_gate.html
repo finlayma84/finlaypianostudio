@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)https://www.vcita.com/api/client_zones/en27y7hjp0zhboyr/account/active_engage_gate -->
+<html dir="ltr" xmlns:ipp="" data-lt-installed="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+  //<![CDATA[
+    function sendMessageToHost(type, data) {
+      var target = parent.postMessage ? parent : (parent.document.postMessage ? parent.document : undefined);
+      sendMessageInternal(target, type , data)
+    }
+    
+    function sendMessageInternal(target, type, data) {
+      if (target && typeof target != 'undefined') {
+        target.postMessage(JSON.stringify({
+          type: type,
+          data: data
+        }), '*');
+      }
+    }
+  //]]>
+</script>
+<script>
+  //<![CDATA[
+    sendMessageToHost('noClient', {});
+  //]]>
+</script>
+</head>
+<body>
+</body></html>

@@ -21,35 +21,6 @@
            <small>&copy; 2019 Pianokeys Web Development</small> 
         </div>
     </div>
-    <script>
-            $('.message .close')
-            .on('click', function() {
-                $(this)
-                .closest('.message')
-                .transition('fade')
-                ;
-            });
-            
-            $('.ui.dropdown').dropdown();
-
-            $('#changeAvatar').click((e)=>{
-                e.preventDefault();
-                $('.ui.modal.avatar')
-                .modal('show')
-;
-            })
-
-            $('#changeEmail').click((e)=>{
-                e.preventDefault();
-                $('.ui.modal.email')
-                .modal('show')
-;
-            })
-
-
-            
-        
-
-        </script>
+    <script src="/scripts/semantic-inits.js"></script>
 </body>
 </html>

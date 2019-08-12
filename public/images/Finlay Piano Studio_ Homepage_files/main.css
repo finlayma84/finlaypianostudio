@@ -34,17 +34,6 @@ body{
 
  
  }  
- /* mobile dropdown (signed in) */
- body > div.main-content > div.ui.one.column.grid > div > div > a{
-     width: 80vw;
-     max-width: 490px;
-     min-width: 258px;
- }
- body > div.main-content > div.ui.one.column.grid > div > div > div{
-    width: 80vw;
-    max-width: 490px;
-    min-width: 258px;   
- }
  #forgot{
      display: inline;
  }

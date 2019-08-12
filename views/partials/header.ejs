@@ -63,7 +63,7 @@
                         <a href="" id="dropdown">
                             <img src="<%=currentUser.avatar%>" alt=""
                                 class="ui avatar image"><%=currentUser.username%><%if (currentUser.isAdmin){%> (admin) <%}%>
-                </a>
+                     </a>
                 
                      
 
@@ -78,8 +78,8 @@
                             <div class="item">
                                 <a  class="item" href="/logout"><i class="sign-out icon"></i>Logout</a>
                             </div>    
-                </div>
-            </div>  
+                    </div>
+                </div>  
        
 
                 <% } %>                   
@@ -110,17 +110,44 @@
                         Request Free Lesson
                     </a>
                     <% if (!currentUser){%>
+                    <div class="ui buttons" id="mobile-signin">
+                            <a href="/login" class="ui large button login mobile only" >
+                                <i class="sign-in icon"></i>
+                                Sign in
+                            </a>
+                            <div class="or"></div>
+                            <a href="/register" class="ui large button register mobile only" >
+                                <i class="user plus icon"></i>
+                                Register
+                            </a>
 
-                    <a href="/login" class="ui large button register mobile only" id="schedule-button">
-                        <i class="sign-in icon"></i>
-                        Sign in
-                    </a>
+                    </div>
+
 
                     <%} else {%>
-                    <a href="/logout" class="ui large red button mobile only" id="schedule-button">
-                        <i class="sign-out icon"></i>
-                        Logout
-                    </a>
+                        
+                        <div class="ui dropdown item mobile only">
+
+                                <a href=""  class="ui large basic black button mobile only">
+                                    <img src="<%=currentUser.avatar%>" alt=""
+                                        class="ui avatar image"><%=currentUser.username%><%if (currentUser.isAdmin){%> (admin) <%}%>
+                             </a>
+                        
+                             
+        
+                                <div class="ui vertical menu">
+                                    <div class="item">
+                                            <%if (currentUser.isAdmin){%> <a href="/users" class="item"><i
+                                            class="users icon"></i>Users</a><%}%> 
+                                    </div>
+                                    <div class="item">
+                                            <a class="item" href="/profile"><i class="user outline icon"></i>View Profile</a>
+                                        </div>
+                                    <div class="item">
+                                        <a  class="item" href="/logout"><i class="sign-out icon"></i>Logout</a>
+                                    </div>    
+                            </div>
+                    </div>  
                     <%}%>
                 </div>
 
