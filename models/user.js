@@ -10,8 +10,8 @@ var UserScehma = new mongoose.Schema({
     resetPasswordToken: String,
     resetPasswordExpires: Date,
     isAdmin:{type:Boolean, default: false},
-    avatar: {type: String, default: "../images/default-user-icon-14.jpg"
-},
+    avatar: {type: String, default: "../images/default-user-icon-14.jpg"},
+    imageId: {type: String, default: "DEFAULT_IMAGEID"}
 });
 
 UserScehma.plugin(passportLocalMongoose);

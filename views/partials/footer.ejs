@@ -16,19 +16,32 @@
 
 
         <div class="ui container" id="yourDiv">
-                <script>
-                        $('.message .close')
-                        .on('click', function() {
-                            $(this)
-                            .closest('.message')
-                            .transition('fade')
-                            ;
-                        })
-                ;
-                    </script>
+
 
            <small>&copy; 2019 Pianokeys Web Development</small> 
         </div>
     </div>
+    <script>
+            $('.message .close')
+            .on('click', function() {
+                $(this)
+                .closest('.message')
+                .transition('fade')
+                ;
+            });
+            
+            $('.ui.dropdown').dropdown();
+
+            $('#changeAvatar').click((e)=>{
+                e.preventDefault();
+                $('.ui.modal')
+                .modal('show')
+;
+            })
+
+            
+        
+
+        </script>
 </body>
 </html>

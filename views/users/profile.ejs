@@ -1,19 +1,34 @@
 <% include ../partials/header %>
 <div class="ui top attached segment">
-        <h1><%=currentUser.firstname%> <%=currentUser.lastname%>'s Profile </h1><a class="ui large basic black button "href="/profile/<%=currentUser.id %>/edit">Edit Profile</a>
+        <h1><%=currentUser.firstname%> <%=currentUser.lastname%>'s Profile </h1>
+        <!-- <a class="ui large basic black button "href="/profile/<%=currentUser.id %>/edit">Edit Profile</a> -->
 <hr>
     <div class="ui stackable two column  grid">
         <div class="column">
                 <div class="ui image">
                     <img src="<%= currentUser.avatar%>" alt="">
                 </div>
+                <br><br>
+                <a id="changeAvatar" href="" class="ui basic button">Change Avatar</a>
                 <br>             
-                <br>             
+                <br>
+                <div class="ui modal">
+                        <div class="header">Change Profile Picture</div>
+                        <div class="content">
+                            <form action="/profile/<%=currentUser._id%>?_method=PUT" method="POST" enctype="multipart/form-data" class="ui form">
+                                <div class="field ten wide"><label for="avatar">Upload profile image (optional)</label>
+                                    <input type="file" id="avatar" accept="image/*" name="avatar">
+                                </div>
+                                <button class="ui primary button" type="submit">Change Picture</button>
+                            </form>
+
+                        </div>
+                      </div>             
                 <strong> <%=currentUser.username%></strong>
                  <br><br>
                 <hr>
                 <br>
-                <strong>Email: <%=currentUser.email %></strong>
+                <strong>Email: <%=currentUser.email %></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="" class="ui basic button">Edit</a>
                 
                 <div class="ui divider"></div>
                 </a>

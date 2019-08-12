@@ -173,7 +173,12 @@ justify-self: flex-end !important
     color:#20769A !important;
     font-weight:100 !important;
 }
-
+#dropdown{
+    color:black;
+}
+#dropdown:hover{
+    background-color: none;
+}
 #schedule-button:hover{
     
     background: rgba(0 ,0,0, 0.2) !important;

@@ -95,6 +95,36 @@ router.post("/register", upload.single('avatar'), async (req, res) => {
 
 
 
+// Change profile picture
+router.put("/profile/:id", upload.single('avatar'), function(req, res){
+  User.findById(req.params.id, async function(err, user){
+      if(err){
+        
+          req.flash("error", err.message);
+          res.redirect("back");
+      } else {
+          if (req.file) {
+            try {
+            
+                await cloudinary.v2.uploader.destroy(user.imageId);
+                var result = await cloudinary.v2.uploader.upload(req.file.path);
+                user.imageId = result.public_id;
+                user.avatar = result.secure_url;
+            }
+            catch(err) {
+                req.flash("error", err.message);
+                return res.redirect("back");
+            }
+          }
+          
+          user.save();
+          req.flash("success","Successfully Updated!");
+          res.redirect("/profile");
+      }
+    })
+  });
+    
+  
 
 
 //LOGIN ROUTES

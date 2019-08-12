@@ -87,67 +87,84 @@
                 </div>
                 <%}else{%>
                 <%if(currentUser){%>
-                <a class="right item" href="/profile/">
-                    <img src="<%=currentUser.avatar%>" alt="" class="ui avatar image"><%=currentUser.firstname%>!<%if (currentUser.isAdmin){%> (admin)
-                        <a href="/users" class="item">Users</a>
-                        <%}%> 
+
+                    <div class="ui dropdown item">
+
+                        <a href="" id="dropdown">
+                            <img src="<%=currentUser.avatar%>" alt=""
+                                class="ui avatar image"><%=currentUser.username%><%if (currentUser.isAdmin){%> (admin) <%}%>
                 </a>
-                <a class="right item mobile hidden" href="/logout"><button class="ui small red button"><i class="sign out alternate icon"></i>Sign Out</button> </a>
+                
+                     
+
+                        <div class="menu">
+                            <div class="item">
+                                    <%if (currentUser.isAdmin){%> <a href="/users" class="item"><i class="users icon"></i>Users</a><%}%> 
+                            </div>
+                            <div class="item">
+                                    <a class="item" href="/profile"><i class="user outline icon"></i>View Profile</a>
+                                </div>
+                            <div class="item">
+                                <a  class="item" href="/logout"><i class="sign-out icon"></i>Logout</a>
+                            </div>
+                          
+
+
+                </div>
+
 
                     <%}
             }%>
 
 
 
-                <div class="hamburger">
-                    <span class="hamburger-bun"></span>
-                    <span class="hamburger-patty"></span>
-                    <span class="hamburger-bun"></span>
+                            <div class="hamburger">
+                                <span class="hamburger-bun"></span>
+                                <span class="hamburger-patty"></span>
+                                <span class="hamburger-bun"></span>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
-            </div>
-        </div>
-    </div>
+                <div class="main-content">
+                    <div class="ui one column grid">
+                        <div class="column">
+                            <a href="https://live.vcita.com/site/en27y7hjp0zhboyr/online-scheduling?staff=ngxwhe1u43agj3x8"
+                                target="blank" class="ui large black button livesite-schedule" id="schedule-button"
+                                data-staff="ngxwhe1u43agj3x8">
+                                <i class="clock outline icon"></i>
+                                Request Free Lesson
+                            </a>
+                            <% if (!currentUser){%>
 
-    <div class="main-content">
-        <div class="ui one column grid">
-                <div class="column">
-                        <a href="https://live.vcita.com/site/en27y7hjp0zhboyr/online-scheduling?staff=ngxwhe1u43agj3x8"
-                            target="blank" class="ui large black button livesite-schedule" id="schedule-button"
-                            data-staff="ngxwhe1u43agj3x8">
-                            <i class="clock outline icon"></i>
-                            Request Free Lesson
-                        </a>
-                        <% if (!currentUser){%>
-            
-                        <a href="/login"
-                             class="ui large button register mobile only" id="schedule-button">
-                            <i class="sign-in icon"></i>
-                            Sign in
-                        </a>
-            
-                    <%} else {%>
-                        <a href="/logout"
-                             class="ui large red button mobile only" id="schedule-button">
-                            <i class="sign-out icon"></i>
-                            Logout
-                        </a>
-                        <%}%>
+                            <a href="/login" class="ui large button register mobile only" id="schedule-button">
+                                <i class="sign-in icon"></i>
+                                Sign in
+                            </a>
+
+                            <%} else {%>
+                            <a href="/logout" class="ui large red button mobile only" id="schedule-button">
+                                <i class="sign-out icon"></i>
+                                Logout
+                            </a>
+                            <%}%>
                 </div>
 
         </div>
 
 
         <% if(error&& error.length > 0){%>
-        <div class="ui negative message" id="error">
-                <i class="close icon"></i>
-            <%= error %></div>   
-               
-        <%}%>
+                            <div class="ui negative message" id="error">
+                                <i class="close icon"></i>
+                                <%= error %></div>
+
+                            <%}%>
 
         <% if(success&& success.length > 0){%>
-        <div class="ui positive message" id="success">
-                <i class="close icon"></i>
-                <%= success %></div>
-        <%}%>
+                            <div class="ui positive message" id="success">
+                                <i class="close icon"></i>
+                                <%= success %></div>
+                            <%}%>
    
