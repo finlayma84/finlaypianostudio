@@ -88,13 +88,14 @@
                     </div>
 
                    
-                   
+                   <% if (!currentUser){ %>
 
                     <div class="hamburger">
                         <span class="hamburger-bun"></span>
                         <span class="hamburger-patty"></span>
                         <span class="hamburger-bun"></span>
                     </div>
+                    <%}%>
 
                 </div>
             </div>
@@ -103,6 +104,7 @@
         <div class="main-content">
             <div class="ui one column grid">
                 <div class="column">
+                        <% if (!currentUser){%>
                     <a href="https://live.vcita.com/site/en27y7hjp0zhboyr/online-scheduling?staff=ngxwhe1u43agj3x8"
                         target="blank" class="ui large black button livesite-schedule" id="schedule-button"
                         data-staff="ngxwhe1u43agj3x8">
@@ -110,9 +112,9 @@
                         Request Free Lesson
                     </a>
                 
-                    <% if (!currentUser){%>
+                  
                     </div>
-                    <div class="ui buttons" id="mobile-signin">
+                    <div class="ui buttons mobile only" id="mobile-signin">
                             <a href="/login" class="ui large button login mobile only" >
                                 <i class="sign-in icon"></i>
                                 Sign in
@@ -145,6 +147,22 @@
                                     <div class="item">
                                             <a class="item" href="/profile"><i class="user outline icon"></i>View Profile</a>
                                         </div>
+                                    <div class="item">
+                                        <a href="/" class="item"><i class="home icon"></i>Home</a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="/approach" class="item"><i class="user outline icon"></i>Approach</a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="/testimonials" class="item"><i class="comments outline icon"></i>Testimonials</a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="/technology" class="item"><i class="tablet alternate icon"></i>Technology</a>
+                                    </div>
+                                    <div class="item">
+                                        <a href="/contact" class="item"><i class="phone icon"></i>Contact</a>
+                                    </div>
+                                
                                     <div class="item">
                                         <a  class="item" href="/logout"><i class="sign-out icon"></i>Logout</a>
                                     </div>    
