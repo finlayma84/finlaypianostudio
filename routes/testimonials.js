@@ -23,7 +23,7 @@ var images = [
 
 //index show all testimonials
 router.get("/", (req, res) => {
-    Testimonial.find({}, (err, allTestimonials) => {
+    Testimonial.find({"isApproved": true}, (err, allTestimonials) => {
         if (err) {
             console.log(err)
         } else {
@@ -79,6 +79,7 @@ router.get("/:id", (req, res)=>{
         }
     })
 })
+
 //edit pop-form to edit testimonial
 router.get("/:id/edit", middleware.checkTestimonialOwnership, (req,res)=>{
     Testimonial.findById((req.params.id), (err, foundTestimonial)=>{

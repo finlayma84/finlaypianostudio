@@ -4,6 +4,8 @@ var testimonialSchema = new mongoose.Schema({
     text: String,
     name: String,
     relationship: String,
+    isApproved: {type: Boolean, default: false},
+
     author:{
        
         id: {
@@ -11,8 +13,9 @@ var testimonialSchema = new mongoose.Schema({
         },
      
      
-        username: String
+        username: String,
      }
+
 })
 
 testimonialSchema.index({name: 1})

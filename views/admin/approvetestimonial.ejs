@@ -1,0 +1,51 @@
+<% include ../partials/header%>
+
+<div class="ui three column stackable grid">
+
+<% testimonials.forEach((testimonial, index)=>{ %>
+    <div class="column">      
+            <div class="ui cards">
+              <div class="card card-height">
+                <div class="image">
+                  <img class="image-height" src="<%=images[index%images.length]%>">
+                </div>
+                <div class="content">
+                  <div class="description  description-height">
+                    <%=testimonial.text%>
+                  </div>
+                </div>
+                <div class="extra extra-height content">
+                  <span class="right floated">
+                    <%=testimonial.relationship%>
+                  </span>
+                  <span>
+                    <i class="user icon"></i>
+                    <%=testimonial.name%>
+                  </span>
+                </div>
+                
+                <div class="extra extra-height content buttons">
+                    <form id="approve" action="/approvetestimonial/<%=testimonial._id%>/?_method=PUT" method="POST">
+                    <button class="ui small basic teal button"><i class="pencil icon"></i>Approve</button>
+                  </form> 
+                    <form id="delete" action="/testimonials/<%= testimonial._id %>?_method=DELETE"
+                        method="post">
+                      <button class="ui small basic orange button"><i class="trash icon"></i>Delete</button>
+                    </form> 
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <%})%>       
+</div>
+
+
+
+
+
+
+
+
+<% include ../partials/footer%>
+</div>

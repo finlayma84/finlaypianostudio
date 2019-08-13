@@ -68,10 +68,15 @@
                      
 
                         <div class="menu">
-                            <div class="item">
-                                    <%if (currentUser.isAdmin){%> <a href="/users" class="item"><i
-                                    class="users icon"></i>Users</a><%}%> 
-                            </div>
+                                    <%if (currentUser.isAdmin){%> 
+                                        <div class="item">
+                                            <a href="/users" class="item"><i class="users icon"></i>Users</a>
+                                         </div>
+                                        <div class="item">
+                                            <a href="/approvetestimonial" class="item"><i class="users icon"></i>Pending Testimonials</a>
+                                         </div>
+
+                                    <%}%> 
                             <div class="item">
                                     <a class="item" href="/profile"><i class="user outline icon"></i>View Profile</a>
                                 </div>
