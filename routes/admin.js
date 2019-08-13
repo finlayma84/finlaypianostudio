@@ -66,7 +66,7 @@ router.get("/users", middleware.isLoggedIn, middleware.isAdmin, (req, res) => {
   //list unapproved testimonials
 
   router.get("/approvetestimonial", middleware.isLoggedIn, middleware.isAdmin, (req,res)=>{
-    Testimonial.find({"isApproved" : false || {"exists": false}},(err, allTestimonials)=>{
+    Testimonial.find({"isApproved" : false},(err, allTestimonials)=>{
       if(err){
         req.flash("error", err)
       }else{
