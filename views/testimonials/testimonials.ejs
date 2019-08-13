@@ -1,20 +1,14 @@
 <% include ../partials/header.ejs %>
 <h1 class="ui huge center aligned header"><i class="comments outline icon"></i>
   Testimonials</h1>
-<%if (currentUser){ %>
 <h1 class="ui huge center aligned header"><a class="ui large black basic  button" href="/testimonials/new">Add new
     testimonial</a></h1>
-   <% }else{%>
-    <h2 class="ui huge center aligned header"><a  href="/login">Login</a> or <a href="/register">Sign Up</a> to Add Testimonial</h2>
-    <%}%>
+
     <br>
 <hr>
 <br>
 <div>
-    <%if (currentUser){ %>
 
-  <h2 class="ui large center aligned header">Click to view, edit, or delete testimonial</h2>
-  <% }%>
 
   <div class="ui three column stackable grid">
     <%testimonials.forEach((testimonial, index)=>{%>

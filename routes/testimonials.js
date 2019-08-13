@@ -33,24 +33,24 @@ router.get("/", (req, res) => {
 })
 
 //new pop-up form to create new testimonial
-router.get("/new", middleware.isLoggedIn, (req, res) => {
+router.get("/new",  (req, res) => {
     res.render("testimonials/new");
 })
 
 //create-post route to push testimonial to database
-router.post("/", middleware.isLoggedIn, (req, res) => {
+router.post("/", (req, res) => {
     var name = req.body.name
     var relationship = req.body.relationship
     var text = req.body.text
-    var author = {
-        id: req.user._id,
-        username: req.user.username
-      }
+    // var author = {
+    //     id: req.user._id,
+    //     username: req.user.username
+    //   }
     var newTestimonial = {
         name: name,
         relationship: relationship,
         text: text,
-        author: author
+        // author: author
         
 
     };
