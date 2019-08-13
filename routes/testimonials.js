@@ -59,6 +59,7 @@ router.post("/", (req, res) => {
         if (err) {
             console.log(err);
         } else {
+            req.flash("success", "Thank you so much for your support!  You are awesome!  Please allow 24-48 hours for your testimonial to be processed and added to this page!")
             res.redirect("/testimonials")
         }
     })
@@ -122,9 +123,9 @@ router.delete("/:id", middleware.isLoggedIn, (req,res)=>{
         console.log(err);
     }else{
             req.flash("error", "Testimonial deleted" )
-            return res.redirect("/testimonials");
+            return res.redirect("back");
         }
-        res.redirect("/testimonials")
+        res.redirect("back")
     })
 });
 
