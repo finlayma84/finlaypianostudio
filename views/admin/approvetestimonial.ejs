@@ -1,6 +1,13 @@
 <% include ../partials/header%>
 
 <div class="ui three column stackable grid">
+    <%if (testimonials.length < 1){ %>
+        <div class="column sixteen wide">
+                <h1 class="ui huge center aligned header"> All up to date! </h1>
+                <img class= "ui huge centered image" src="https://images.unsplash.com/photo-1516600164266-f3b8166ae679?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="">
+                <%} %>
+        </div>
+
 
 <% testimonials.forEach((testimonial, index)=>{ %>
     <div class="column">      
@@ -38,6 +45,7 @@
           </a>
         </div>
         <%})%>       
+
     </div>
 
 

@@ -21,3 +21,9 @@ $('#changeEmail').click((e)=>{
     .modal('show')
 ;
 })
+$('#verify').click((e)=>{
+    e.preventDefault();
+    $('.ui.modal')
+    .modal('show')
+;
+})
