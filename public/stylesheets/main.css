@@ -1,19 +1,13 @@
 html{
     background: #F9F9F9
 }
-body > div.container > div > div > div > div > div > div:hover {
-background: none;
-}
+
 
 body{
     background: #F9F9F9;
     height: 100vh;
 }
-@media(max-width: 1200px){
-    body > div.container > div > div > div.ui.secondary.menu.right > a:nth-child(1) > button{
-        display: none;
-    }
-}
+
 @media (max-width:767px){
 
 
@@ -54,23 +48,7 @@ body{
  #relationship{
      color: red;
  }
- #mobile-menu{
-    overflow-y: scroll;
-    height: 50vh;
-    background-color: rgba(40,40,40, 0.95)
- }
- #mobile-menu > .item {
-     border-bottom: 1px #CCCCCC solid;
- }
- #mobile-menu > .item:last-child {
-    border-bottom: none;
- }
- #mobile-menu > .item > a:hover {
-    background-color: #404040
- }
- #mobile-menu > .item:hover {
-    background-color: #404040
- }
+
   select{
       height: 3rem !important;
   }
@@ -200,15 +178,16 @@ justify-self: flex-end !important
     align-content: center;
     flex-wrap: wrap;
 }
-.p-heading{
-    color:#20769A !important;
-    font-weight:100 !important;
-}
+
 #dropdown{
     color:black;
 }
 #dropdown:hover{
     background-color: none;
+}
+.p-heading{
+    color:#20769A !important;
+    font-weight:100 !important;
 }
 
 #schedule-button:hover{
