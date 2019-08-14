@@ -27,3 +27,5 @@ $('#verify').click((e)=>{
     .modal('show')
 ;
 })
+
+$('.url.example .ui.embed').embed();
