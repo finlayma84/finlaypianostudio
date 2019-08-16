@@ -1,0 +1,47 @@
+
+.navbar-container{
+    padding: 0 10%
+}
+/* SIGNED IN DROPDOWN MENU ITEMS:HOVER */
+body > div.container > div > div > div > div > div > div:hover {
+    background: none;
+    }
+#schedule-button, #mobile-signin{
+        border: 2px black hidden !important;
+        width:100%;
+        margin: 20px 0;
+        max-width: 490px;
+        font-size: 1rem;
+    }
+.login{
+        background: #5e5e6f !important;
+        color: white !important;
+
+}
+
+#dropdown{
+        color:black;
+}
+    
+#dropdown:hover{
+        background-color: none;
+}
+#schedule-button:hover{
+    
+        background: rgba(0 ,0,0, 0.2) !important;
+        color: black!important;
+        border: 2px black solid !important;
+     
+    }
+    #schedule-div{
+        display: inline;
+    }
+
+    .right a {
+justify-self: flex-end !important
+}
+.register{
+    background: #20769A !important;
+    color: white !important;
+}
+  

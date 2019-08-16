@@ -1,13 +1,4 @@
-html{
-    background: #F9F9F9
-}
-
-
-body{
-    background: #F9F9F9;
-    height: 100vh;
-}
-
+/* MEDIA QUERIES */
 @media (max-width:767px){
 
 
@@ -21,103 +12,68 @@ body{
     #profileActivity{
         padding-top: 20px;
     }
-    #schedule-button, #mobile-signin{
-        border: 2px black hidden !important;
-        width:100%;
-        margin: 20px 0;
-        max-width: 490px;
-        font-size: 1rem;
+ 
+    @media(max-width: 1200px){
+        body > div.container > div > div > div.ui.secondary.menu.right > a:nth-child(1) > button{
+            display: none;
+        }
     }
 
  
  }  
- /* mobile dropdown (signed in) */
- body > div.main-content > div.ui.one.column.grid > div > div > a{
-     width: 80vw;
-     max-width: 490px;
-     min-width: 258px;
- }
- body > div.main-content > div.ui.one.column.grid > div > div > div{
-    width: 80vw;
-    max-width: 490px;
-    min-width: 258px;   
- }
- #forgot{
-     display: inline;
- }
- #relationship{
-     color: red;
- }
+
+ /* ELEMENTS */
+ *:focus{
+    outline: none!important;
+}
+
+html{
+    background: #F9F9F9
+}
+
+
+body{
+    background: #F9F9F9;
+    height: 100vh;
+}
+textarea{
+    resize: none !important;
+}
+hr{
+    border-color:#20769A;
+}
+
+
 
   select{
       height: 3rem !important;
   }
-*:focus{
-    outline: none!important;
-}
- textarea{
-     resize: none !important;
- }
- .basic-button:hover{
-     background-color: black !important;
-     color: white !important;
- }
-.buttons{
-    display: flex;
-    justify-content: center;
-}
-#authcontainer{
-    padding-left: 25%;
-}
-#delete{
-    display: inline;
-}
-#show-card{
-    width: 500px;
-}
- body > div.ui.vertical.footer.top.attached.segment.center.aligned{
-     margin-top: 50px;
- }
-#footer-menu a{
-    color: black;
-    padding: 5px;
+
+
+/* CLASSES */
+.userpage:nth-child(even){
+    background: #f5f5f5;
 
 }
-#footer-menu a:hover{
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0.05) ;
-}
-#footer-menu{
-    margin-top: 15px;
-}
-#contact-content{
-    padding-top: 25px;
-}
-#banner-image{
-    border: black 5px solid;
-    padding: 0
+.userpage .image{
+    margin-bottom: 15px;
 }
 .banner-container{
- display: flex;
-
-}
+    display: flex;   
+   }
 .banner{
-    margin-top: 70px;
-    width: 100%;
-    height:  150px;
+       margin-top: 70px;
+       width: 100%;
+       height:  150px;
+   }
+.basic-button:hover{
+    background-color: black !important;
+    color: white !important;
 }
-#banner-headline{
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    z-index: 1;
-    font-family: monospace;
-    font-weight: 100;
-    background-color:#20769A;
-    color: white;
-    padding: 10px;
+.buttons{
+   display: flex;
+   justify-content: center;
 }
-
 .image a{
     display: flex !important;
     justify-content: center;
@@ -130,20 +86,9 @@ body{
     height: 20%;
     left: 20%;
     background-color: rgba(0, 0, 0, 0.4) !important; 
+}
 
 
-}
-.right a {
-justify-self: flex-end !important
-}
-.register{
-    background: #20769A !important;
-    color: white !important;
-}
-.login{
-    background: #5e5e6f !important;
-    color: white !important;
-}
 .image a:hover{
     background-color: rgba(0,0,0,0.6)  !important;
     color: white;
@@ -153,50 +98,13 @@ justify-self: flex-end !important
     justify-content: center;
     align-items: center;
 }
-#logo{
-    width: 100%;
-    min-width: 200px;
-    max-width: 300px;
-    margin-right: 50px;
-}
 
-
-
-
-
-#schedule-div{
-    display: inline;
-}
-#index-container{
-    margin-top:30px;
-}
-#yourDiv{
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap;
-}
-
-#dropdown{
-    color:black;
-}
-#dropdown:hover{
-    background-color: none;
-}
 .p-heading{
     color:#20769A !important;
     font-weight:100 !important;
 }
 
-#schedule-button:hover{
-    
-    background: rgba(0 ,0,0, 0.2) !important;
-    color: black!important;
-    border: 2px black solid !important;
- 
-}
+
 .footer{
     position: relative;
     bottom: 0;
@@ -206,9 +114,7 @@ justify-self: flex-end !important
     padding: 0 10%;
 
 }
-body > div.main-content > div > h2{
-    margin-bottom: 50px !important;
-}
+
 .video-container {
     border: 2px lightgray solid;
     position: relative;
@@ -226,10 +132,7 @@ left: 0;
 width: 100%;
 height: 100%;
 }
-#tech-content{
-    padding:10% 10%;
-    padding-top: 20px;
-}
+
 .testimonial{
     border:2px black solid;
     height: 300px;
@@ -238,18 +141,9 @@ height: 100%;
    padding: 10px;
 
 }
-#contact-image{
-    margin-top: 40px;
-    height: 500px;
-    width: 500px;
-    border: 2px black solid !important;
-}
-.navbar-container{
-    padding: 0 10%
-}
-hr{
-    border-color:#20769A;
-}
+
+
+
 
 .description-height{
     height: 150px;
@@ -258,7 +152,92 @@ hr{
 .image-height{
     height: 250px !important;
 }
+/* ids */
+#footer-menu a:hover{
+    box-sizing: border-box;
+    background-color: rgba(0,0,0,0.05) ;
+}
+#footer-menu{
+    margin-top: 15px;
+}
+#contact-content{
+    padding-top: 25px;
+}
+#banner-image{
+    border: black 5px solid;
+    padding: 0
+}
+#banner-headline{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    z-index: 1;
+    font-family: monospace;
+    font-weight: 100;
+    background-color:#20769A;
+    color: white;
+    padding: 10px;
+}
 
+#tech-content{
+    padding:10% 10%;
+    padding-top: 20px;
+}
+#authcontainer{
+    padding-left: 25%;
+}
+#delete{
+    display: inline;
+}
+#show-card{
+    width: 500px;
+}
+
+#footer-menu a{
+    color: black;
+    padding: 5px;
+
+}
+#contact-image{
+    margin-top: 40px;
+    height: 500px;
+    width: 500px;
+    border: 2px black solid !important;
+}
+#banner-image > img{
+    width: 100%;
+}
+#vcita{
+    height: 700px;
+}
+
+#forgot{
+    display: inline;
+}
+#relationship{
+    color: red;
+}
+
+#index-container{
+    margin-top:30px;
+}
+#yourDiv{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+#logo{
+    width: 100%;
+    min-width: 200px;
+    max-width: 300px;
+    margin-right: 50px;
+}
+
+
+/* more specific than id */
 #social a i{
 
     font-size: 2rem;
@@ -268,12 +247,23 @@ hr{
 #social a:hover{
     text-shadow: rgba(10, 10, 10, 0.4) 2px 2px 4px;
 }
-#banner-image > img{
-    width: 100%;
-}
-#vcita{
-    height: 700px;
+body > div.ui.vertical.footer.top.attached.segment.center.aligned{
+    margin-top: 50px;
 }
 #contact-content > div:nth-child(2) > h4{
     margin-top: 2.4em;
+}
+body > div.main-content > div > h2{
+    margin-bottom: 50px !important;
+}
+ /* mobile dropdown (signed in) */
+ body > div.main-content > div.ui.one.column.grid > div > div > a{
+    width: 80vw;
+    max-width: 490px;
+    min-width: 258px;
+}
+body > div.main-content > div.ui.one.column.grid > div > div > div{
+   width: 80vw;
+   max-width: 490px;
+   min-width: 258px;   
 }

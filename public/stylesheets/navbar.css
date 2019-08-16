@@ -1,9 +1,0 @@
-body > div.container > div > div > div > div > div > div:hover {
-    background: none;
-    }
-    @media(max-width: 1200px){
-        body > div.container > div > div > div.ui.secondary.menu.right > a:nth-child(1) > button{
-            display: none;
-        }
-    }
-  

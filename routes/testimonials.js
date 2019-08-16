@@ -7,6 +7,8 @@ var images = [
 
     "https://images.unsplash.com/photo-1505248207594-9f9912dda70a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
     
+    "../images/pianostairs.jpeg",
+
     "https://images.unsplash.com/photo-1433622070098-754fdf81c929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
 
     "https://images.unsplash.com/photo-1532959801411-cf28447984f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",    //piano
@@ -15,9 +17,8 @@ var images = [
     
     "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
 
-    "https://images.unsplash.com/photo-1539789760335-0391b207a0fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    "https://images.unsplash.com/photo-1539789760335-0391b207a0fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
 
-    "../images/pianostairs.jpeg"
 
 ]
 

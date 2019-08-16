@@ -3,7 +3,7 @@
 <h1 class="ui huge center aligned header">Roster</h1>
 <hr>
 <% users.forEach((user)=> {%>
-    <div class="ui attached segment">
+    <div class="ui attached segment userpage">
    <strong><h2><%=user.firstname%> <%=user.lastname%></h2></strong> 
     <p><%=user.email%></p>
     <p>Joined: <%=user._id.getTimestamp().toString().substring(0,15)%></p>

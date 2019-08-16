@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/stylesheets/hamburger.css" type="text/css" media="all">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/header.css">
     <link rel="stylesheet" type="text/css" href="/stylesheets/mobileview.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src ="/scripts/vcitaconfig.js"></script>
@@ -28,7 +28,6 @@
                     <img id="logo" src="/images/logo.png" alt="couldn't find image">
 
                 </a>
-
                 <a class="item" href="/">
                     Home
                 </a>
@@ -48,12 +47,12 @@
 
                     <% if (!currentUser){%>
                 <div class="ui buttons">
-                        <a class="item mobile hidden" href="/login">
-                            <a href="login" class="login ui button mobile hidden item"><i class="sign-in icon"></i>Sign in</a>
+                        <a class="mobile hidden" href="/login">
+                            <a href="login" class="login ui button item mobile hidden"><i class="sign-in icon"></i>Sign in</a>
                         </a>
                         <a href="/login" class="item mobile only"><i class="sign-in icon"></i>Sign in</a>
                       
-                            <a href="/register" class="ui button mobile hidden register item"><i class="user plus icon"></i>Register</a>
+                            <a href="/register" class="ui button mobile item hidden register"><i class="user plus icon"></i>Register</a>
                
                 </div>
 
