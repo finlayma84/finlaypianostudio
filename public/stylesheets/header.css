@@ -43,8 +43,3 @@ justify-self: flex-end !important
     background: #20769A !important;
     color: white !important;
 }
-@media (max-width: 500px){
-    #schedule-button{
-        width: 100%;
-    }
-}

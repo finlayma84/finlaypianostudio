@@ -16,3 +16,8 @@
     background-color: #404040
  }
 
+ @media (max-width: 767px){
+   #schedule-button #mobile-signin{
+       width: 100%;
+   }
+}
