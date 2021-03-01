@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            background: black;
+        }
+        .fox{
+            width: 40vw;
+            height: 50vh;
+            border: 2px white solid;
+            object-fit: cover;
+            object-position: center;
+        }
+        .content{
+            display: flex;
+            flex-direction: column;
+            flex: 4 100vw;
+            align-items: center;
+            justify-content: center;
+            padding: 20vw;   
+        }
+        .item{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 2vw;
+        }
+        .btn{
+            padding: 15px 40px;
+            border-radius: 10px;
+            background: #2277FF;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .btn:focus{
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Random Trivia Generator!</h1>
+
+<div class="content">
+    <div class="item">
+            <button  class = "btn" id="btn">Triva Question</button><br>
+    </div>
+    <div class="item">    
+        <div class="fact">
+
+        </div>
+
+</div>
+
+    <script>
+        var url="https://opentdb.com/api.php?amount=1";
+
+        var btn= document.querySelector('#btn');
+        var ansbtn = document.querySelector("#ansbtn")
+
+        btn.addEventListener("click", function(){
+            axios.get(url)
+        
+        .then(function(res){
+            document.querySelector(".fact").innerHTML=res.data.results[0].question + "<p>" + res.data.results[0].correct_answer + "</p>"
+
+        })
+        .catch(function(){
+            console.log("ERR")
+        })
+    })
+
+
+        </script>
+</body>
+
+</html>
