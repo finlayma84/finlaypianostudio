@@ -7,7 +7,7 @@ body > div.container > div > div > div > div > div > div:hover {
     background: none;
     }
 #schedule-button, #mobile-signin{
-        border: 2px black hidden !important;
+        border: 2px black !important;
         margin: 20px 0;
         max-width: 490px;
         font-size: 1rem;
