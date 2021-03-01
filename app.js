@@ -31,11 +31,6 @@ app.use(require("express-session")({
   saveUninitialized: false
 }));
 
-import sslRedirect from 'heroku-ssl-redirect';
-// enable ssl redirect
-app.use(sslRedirect());
-
-
 
 app.use(passport.initialize());
 app.use(passport.session());
