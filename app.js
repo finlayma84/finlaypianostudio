@@ -7,7 +7,8 @@ const express = require("express"),
     passport = require('passport'),
     LocalStrategy = require('passport-local'),
     methodOverride = require("method-override"),
-    ejsLint= require("ejs-lint");
+    ejsLint= require("ejs-lint"),
+    forceSsl = require('force-ssl-heroku');
 
 //require routes
 indexRoutes = require("./routes/index")
@@ -30,7 +31,7 @@ app.use(require("express-session")({
   resave: false,
   saveUninitialized: false
 }));
-
+app.use(forceSsl)
 
 app.use(passport.initialize());
 app.use(passport.session());
