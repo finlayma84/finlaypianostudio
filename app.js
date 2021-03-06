@@ -51,12 +51,7 @@ app.use("/testimonials", testimonialRoutes)
 app.use("/profile", userRoutes)
 app.use("/", authRoutes)
 app.use("/", adminRoutes)
-app.use((req, res, next) => {
-  if (req.header('x-forwarded-proto') !== 'https')
-    res.redirect(`https://${req.header('host')}${req.url}`)
-  else
-    next()
-})
+
 mongoose.connect(process.env.DATABASEURL, {
   useNewUrlParser: true,
   useCreateIndex: true
