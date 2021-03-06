@@ -19,5 +19,6 @@
  @media (max-width: 767px){
    #schedule-button #mobile-signin{
        width: 100%;
+       align-self: stretch;
    }
 }
